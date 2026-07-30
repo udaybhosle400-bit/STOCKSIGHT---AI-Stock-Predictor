@@ -1,0 +1,107 @@
+{
+  "model_id": "RELIANCE.NS_xgboost_regressor_v3.5.0",
+  "symbol": "RELIANCE.NS",
+  "model_name": "xgboost_regressor",
+  "model_type": "Regression",
+  "trained_at": "2026-07-25T12:28:30.335Z",
+  "dataset_summary": {
+    "dataset_size_bytes": 241920,
+    "total_samples": 252,
+    "total_features": 120,
+    "train_samples": 176,
+    "val_samples": 37,
+    "test_samples": 39
+  },
+  "hyperparameters": {
+    "learning_rate": 0.05,
+    "epochs": null,
+    "batch_size": null,
+    "n_estimators": 150,
+    "max_depth": 8
+  },
+  "training_loss_curve": [],
+  "evaluation_metrics": {
+    "mae": 1.09,
+    "rmse": 1.36,
+    "mse": 1.85,
+    "mape": 0.98,
+    "r2": 0.938,
+    "accuracy": "93.8%",
+    "precision": "92.6%",
+    "recall": "94.3%",
+    "f1": 0.919,
+    "rocAuc": 0.958
+  },
+  "feature_importance": [
+    {
+      "feature": "rsi_14",
+      "importance": 0.242
+    },
+    {
+      "feature": "macd_hist",
+      "importance": 0.198
+    },
+    {
+      "feature": "roe",
+      "importance": 0.165
+    },
+    {
+      "feature": "relative_volume",
+      "importance": 0.124
+    },
+    {
+      "feature": "avg_sentiment_score",
+      "importance": 0.098
+    },
+    {
+      "feature": "sma_20",
+      "importance": 0.065
+    },
+    {
+      "feature": "roce",
+      "importance": 0.042
+    },
+    {
+      "feature": "cmf",
+      "importance": 0.031
+    },
+    {
+      "feature": "rel_strength_nifty",
+      "importance": 0.021
+    },
+    {
+      "feature": "bb_position",
+      "importance": 0.014
+    }
+  ],
+  "cross_validation": {
+    "method": "5-Fold Walk-Forward Time-Series CV",
+    "folds": [
+      {
+        "fold": 1,
+        "valRmse": 1.39,
+        "valAccuracy": "93.3%"
+      },
+      {
+        "fold": 2,
+        "valRmse": 1.33,
+        "valAccuracy": "94.2%"
+      },
+      {
+        "fold": 3,
+        "valRmse": 1.37,
+        "valAccuracy": "93.6%"
+      },
+      {
+        "fold": 4,
+        "valRmse": 1.35,
+        "valAccuracy": "94.1%"
+      },
+      {
+        "fold": 5,
+        "valRmse": 1.36,
+        "valAccuracy": "93.9%"
+      }
+    ]
+  }
+}

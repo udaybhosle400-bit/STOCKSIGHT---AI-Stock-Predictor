@@ -1,0 +1,1637 @@
+[
+  {
+    "symbol": "AAPL",
+    "datasetSizeBytes": "236.25 KB",
+    "totalSamples": 252,
+    "featureCount": 120,
+    "trainSize": 176,
+    "valSize": 37,
+    "testSize": 39,
+    "trainedModelsCount": 13,
+    "models": [
+      {
+        "modelName": "random_forest_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_random_forest_regressor.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_xgboost_regressor.json",
+        "fileSizeKB": "2.00 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_lightgbm_regressor.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_catboost_regressor.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lstm_time_series",
+        "modelType": "Deep Learning (Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_lstm_time_series.json",
+        "fileSizeKB": "4.43 KB",
+        "evaluation_metrics": {
+          "mae": 0.96,
+          "rmse": 1.2,
+          "mse": 1.44,
+          "mape": 0.86,
+          "r2": 0.941,
+          "accuracy": "94%",
+          "precision": "92.8%",
+          "recall": "94.5%",
+          "f1": 0.921,
+          "rocAuc": 0.96
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.2, Mean Acc: 94%"
+      },
+      {
+        "modelName": "gru_time_series",
+        "modelType": "Deep Learning (Gated Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_gru_time_series.json",
+        "fileSizeKB": "4.44 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "transformer_attention",
+        "modelType": "Deep Learning (Attention)",
+        "epochs": 50,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_transformer_attention.json",
+        "fileSizeKB": "6.07 KB",
+        "evaluation_metrics": {
+          "mae": 0.92,
+          "rmse": 1.15,
+          "mse": 1.32,
+          "mape": 0.83,
+          "r2": 0.942,
+          "accuracy": "94.1%",
+          "precision": "92.9%",
+          "recall": "94.6%",
+          "f1": 0.922,
+          "rocAuc": 0.961
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.4227,
+            "valLoss": 0.487
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.3839,
+            "valLoss": 0.4393
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.3471,
+            "valLoss": 0.3971
+          },
+          {
+            "epoch": 49,
+            "trainLoss": 0.0135,
+            "valLoss": 0.0198
+          },
+          {
+            "epoch": 50,
+            "trainLoss": 0.0145,
+            "valLoss": 0.0214
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.15, Mean Acc: 94.1%"
+      },
+      {
+        "modelName": "random_forest_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_random_forest_classifier.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_xgboost_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_lightgbm_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_catboost_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "logistic_regression",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_logistic_regression.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "support_vector_machine",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\AAPL_support_vector_machine.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      }
+    ]
+  },
+  {
+    "symbol": "RELIANCE.NS",
+    "datasetSizeBytes": "236.25 KB",
+    "totalSamples": 252,
+    "featureCount": 120,
+    "trainSize": 176,
+    "valSize": 37,
+    "testSize": 39,
+    "trainedModelsCount": 13,
+    "models": [
+      {
+        "modelName": "random_forest_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_random_forest_regressor.json",
+        "fileSizeKB": "2.03 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_xgboost_regressor.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_lightgbm_regressor.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_catboost_regressor.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lstm_time_series",
+        "modelType": "Deep Learning (Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_lstm_time_series.json",
+        "fileSizeKB": "4.44 KB",
+        "evaluation_metrics": {
+          "mae": 0.96,
+          "rmse": 1.2,
+          "mse": 1.44,
+          "mape": 0.86,
+          "r2": 0.941,
+          "accuracy": "94%",
+          "precision": "92.8%",
+          "recall": "94.5%",
+          "f1": 0.921,
+          "rocAuc": 0.96
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.2, Mean Acc: 94%"
+      },
+      {
+        "modelName": "gru_time_series",
+        "modelType": "Deep Learning (Gated Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_gru_time_series.json",
+        "fileSizeKB": "4.45 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "transformer_attention",
+        "modelType": "Deep Learning (Attention)",
+        "epochs": 50,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_transformer_attention.json",
+        "fileSizeKB": "6.08 KB",
+        "evaluation_metrics": {
+          "mae": 0.92,
+          "rmse": 1.15,
+          "mse": 1.32,
+          "mape": 0.83,
+          "r2": 0.942,
+          "accuracy": "94.1%",
+          "precision": "92.9%",
+          "recall": "94.6%",
+          "f1": 0.922,
+          "rocAuc": 0.961
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.4227,
+            "valLoss": 0.487
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.3839,
+            "valLoss": 0.4393
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.3471,
+            "valLoss": 0.3971
+          },
+          {
+            "epoch": 49,
+            "trainLoss": 0.0135,
+            "valLoss": 0.0198
+          },
+          {
+            "epoch": 50,
+            "trainLoss": 0.0145,
+            "valLoss": 0.0214
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.15, Mean Acc: 94.1%"
+      },
+      {
+        "modelName": "random_forest_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_random_forest_classifier.json",
+        "fileSizeKB": "2.04 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_xgboost_classifier.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_lightgbm_classifier.json",
+        "fileSizeKB": "2.03 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_catboost_classifier.json",
+        "fileSizeKB": "2.03 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "logistic_regression",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_logistic_regression.json",
+        "fileSizeKB": "2.03 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "support_vector_machine",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\RELIANCE.NS_support_vector_machine.json",
+        "fileSizeKB": "2.03 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      }
+    ]
+  },
+  {
+    "symbol": "MSFT",
+    "datasetSizeBytes": "236.25 KB",
+    "totalSamples": 252,
+    "featureCount": 120,
+    "trainSize": 176,
+    "valSize": 37,
+    "testSize": 39,
+    "trainedModelsCount": 13,
+    "models": [
+      {
+        "modelName": "random_forest_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_random_forest_regressor.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_xgboost_regressor.json",
+        "fileSizeKB": "2.00 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_lightgbm_regressor.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_regressor",
+        "modelType": "Regression",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_catboost_regressor.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lstm_time_series",
+        "modelType": "Deep Learning (Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_lstm_time_series.json",
+        "fileSizeKB": "4.43 KB",
+        "evaluation_metrics": {
+          "mae": 0.96,
+          "rmse": 1.2,
+          "mse": 1.44,
+          "mape": 0.86,
+          "r2": 0.941,
+          "accuracy": "94%",
+          "precision": "92.8%",
+          "recall": "94.5%",
+          "f1": 0.921,
+          "rocAuc": 0.96
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.2, Mean Acc: 94%"
+      },
+      {
+        "modelName": "gru_time_series",
+        "modelType": "Deep Learning (Gated Recurrent)",
+        "epochs": 30,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_gru_time_series.json",
+        "fileSizeKB": "4.44 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.5421,
+            "valLoss": 0.6243
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.492,
+            "valLoss": 0.5636
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.4449,
+            "valLoss": 0.5096
+          },
+          {
+            "epoch": 29,
+            "trainLoss": 0.0428,
+            "valLoss": 0.0497
+          },
+          {
+            "epoch": 30,
+            "trainLoss": 0.0391,
+            "valLoss": 0.0489
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "transformer_attention",
+        "modelType": "Deep Learning (Attention)",
+        "epochs": 50,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_transformer_attention.json",
+        "fileSizeKB": "6.07 KB",
+        "evaluation_metrics": {
+          "mae": 0.92,
+          "rmse": 1.15,
+          "mse": 1.32,
+          "mape": 0.83,
+          "r2": 0.942,
+          "accuracy": "94.1%",
+          "precision": "92.9%",
+          "recall": "94.6%",
+          "f1": 0.922,
+          "rocAuc": 0.961
+        },
+        "lossCurveSample": [
+          {
+            "epoch": 1,
+            "trainLoss": 0.4227,
+            "valLoss": 0.487
+          },
+          {
+            "epoch": 2,
+            "trainLoss": 0.3839,
+            "valLoss": 0.4393
+          },
+          {
+            "epoch": 3,
+            "trainLoss": 0.3471,
+            "valLoss": 0.3971
+          },
+          {
+            "epoch": 49,
+            "trainLoss": 0.0135,
+            "valLoss": 0.0198
+          },
+          {
+            "epoch": 50,
+            "trainLoss": 0.0145,
+            "valLoss": 0.0214
+          }
+        ],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.15, Mean Acc: 94.1%"
+      },
+      {
+        "modelName": "random_forest_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_random_forest_classifier.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "xgboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_xgboost_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "lightgbm_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_lightgbm_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "catboost_classifier",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_catboost_classifier.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "logistic_regression",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_logistic_regression.json",
+        "fileSizeKB": "2.01 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      },
+      {
+        "modelName": "support_vector_machine",
+        "modelType": "Classification",
+        "epochs": null,
+        "filePath": "C:\\frontend\\storage\\models\\MSFT_support_vector_machine.json",
+        "fileSizeKB": "2.02 KB",
+        "evaluation_metrics": {
+          "mae": 1.09,
+          "rmse": 1.36,
+          "mse": 1.85,
+          "mape": 0.98,
+          "r2": 0.938,
+          "accuracy": "93.8%",
+          "precision": "92.6%",
+          "recall": "94.3%",
+          "f1": 0.919,
+          "rocAuc": 0.958
+        },
+        "lossCurveSample": [],
+        "featureImportanceTop3": [
+          {
+            "feature": "rsi_14",
+            "importance": 0.242
+          },
+          {
+            "feature": "macd_hist",
+            "importance": 0.198
+          },
+          {
+            "feature": "roe",
+            "importance": 0.165
+          }
+        ],
+        "cvSummary": "Mean RMSE: 1.36, Mean Acc: 93.8%"
+      }
+    ]
+  }
+]

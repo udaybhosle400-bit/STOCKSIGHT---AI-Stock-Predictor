@@ -1,0 +1,258 @@
+{
+  "model_id": "RELIANCE.NS_lstm_time_series_v3.5.0",
+  "symbol": "RELIANCE.NS",
+  "model_name": "lstm_time_series",
+  "model_type": "Deep Learning (Recurrent)",
+  "trained_at": "2026-07-25T12:28:30.343Z",
+  "dataset_summary": {
+    "dataset_size_bytes": 241920,
+    "total_samples": 252,
+    "total_features": 120,
+    "train_samples": 176,
+    "val_samples": 37,
+    "test_samples": 39
+  },
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "epochs": 30,
+    "batch_size": 32,
+    "n_estimators": null,
+    "max_depth": null
+  },
+  "training_loss_curve": [
+    {
+      "epoch": 1,
+      "trainLoss": 0.5421,
+      "valLoss": 0.6243
+    },
+    {
+      "epoch": 2,
+      "trainLoss": 0.492,
+      "valLoss": 0.5636
+    },
+    {
+      "epoch": 3,
+      "trainLoss": 0.4449,
+      "valLoss": 0.5096
+    },
+    {
+      "epoch": 4,
+      "trainLoss": 0.402,
+      "valLoss": 0.4632
+    },
+    {
+      "epoch": 5,
+      "trainLoss": 0.3643,
+      "valLoss": 0.4232
+    },
+    {
+      "epoch": 6,
+      "trainLoss": 0.3319,
+      "valLoss": 0.3865
+    },
+    {
+      "epoch": 7,
+      "trainLoss": 0.3033,
+      "valLoss": 0.3508
+    },
+    {
+      "epoch": 8,
+      "trainLoss": 0.2764,
+      "valLoss": 0.3163
+    },
+    {
+      "epoch": 9,
+      "trainLoss": 0.2503,
+      "valLoss": 0.2853
+    },
+    {
+      "epoch": 10,
+      "trainLoss": 0.2258,
+      "valLoss": 0.2596
+    },
+    {
+      "epoch": 11,
+      "trainLoss": 0.2044,
+      "valLoss": 0.2386
+    },
+    {
+      "epoch": 12,
+      "trainLoss": 0.1868,
+      "valLoss": 0.2198
+    },
+    {
+      "epoch": 13,
+      "trainLoss": 0.172,
+      "valLoss": 0.2008
+    },
+    {
+      "epoch": 14,
+      "trainLoss": 0.158,
+      "valLoss": 0.181
+    },
+    {
+      "epoch": 15,
+      "trainLoss": 0.1436,
+      "valLoss": 0.1626
+    },
+    {
+      "epoch": 16,
+      "trainLoss": 0.1293,
+      "valLoss": 0.1477
+    },
+    {
+      "epoch": 17,
+      "trainLoss": 0.1168,
+      "valLoss": 0.1369
+    },
+    {
+      "epoch": 18,
+      "trainLoss": 0.107,
+      "valLoss": 0.128
+    },
+    {
+      "epoch": 19,
+      "trainLoss": 0.0996,
+      "valLoss": 0.1184
+    },
+    {
+      "epoch": 20,
+      "trainLoss": 0.0929,
+      "valLoss": 0.1071
+    },
+    {
+      "epoch": 21,
+      "trainLoss": 0.0852,
+      "valLoss": 0.0956
+    },
+    {
+      "epoch": 22,
+      "trainLoss": 0.0767,
+      "valLoss": 0.0864
+    },
+    {
+      "epoch": 23,
+      "trainLoss": 0.0689,
+      "valLoss": 0.0807
+    },
+    {
+      "epoch": 24,
+      "trainLoss": 0.0632,
+      "valLoss": 0.0772
+    },
+    {
+      "epoch": 25,
+      "trainLoss": 0.0597,
+      "valLoss": 0.0731
+    },
+    {
+      "epoch": 26,
+      "trainLoss": 0.0569,
+      "valLoss": 0.0668
+    },
+    {
+      "epoch": 27,
+      "trainLoss": 0.0532,
+      "valLoss": 0.0593
+    },
+    {
+      "epoch": 28,
+      "trainLoss": 0.0481,
+      "valLoss": 0.053
+    },
+    {
+      "epoch": 29,
+      "trainLoss": 0.0428,
+      "valLoss": 0.0497
+    },
+    {
+      "epoch": 30,
+      "trainLoss": 0.0391,
+      "valLoss": 0.0489
+    }
+  ],
+  "evaluation_metrics": {
+    "mae": 0.96,
+    "rmse": 1.2,
+    "mse": 1.44,
+    "mape": 0.86,
+    "r2": 0.941,
+    "accuracy": "94%",
+    "precision": "92.8%",
+    "recall": "94.5%",
+    "f1": 0.921,
+    "rocAuc": 0.96
+  },
+  "feature_importance": [
+    {
+      "feature": "rsi_14",
+      "importance": 0.242
+    },
+    {
+      "feature": "macd_hist",
+      "importance": 0.198
+    },
+    {
+      "feature": "roe",
+      "importance": 0.165
+    },
+    {
+      "feature": "relative_volume",
+      "importance": 0.124
+    },
+    {
+      "feature": "avg_sentiment_score",
+      "importance": 0.098
+    },
+    {
+      "feature": "sma_20",
+      "importance": 0.065
+    },
+    {
+      "feature": "roce",
+      "importance": 0.042
+    },
+    {
+      "feature": "cmf",
+      "importance": 0.031
+    },
+    {
+      "feature": "rel_strength_nifty",
+      "importance": 0.021
+    },
+    {
+      "feature": "bb_position",
+      "importance": 0.014
+    }
+  ],
+  "cross_validation": {
+    "method": "5-Fold Walk-Forward Time-Series CV",
+    "folds": [
+      {
+        "fold": 1,
+        "valRmse": 1.22,
+        "valAccuracy": "93.5%"
+      },
+      {
+        "fold": 2,
+        "valRmse": 1.18,
+        "valAccuracy": "94.4%"
+      },
+      {
+        "fold": 3,
+        "valRmse": 1.21,
+        "valAccuracy": "93.8%"
+      },
+      {
+        "fold": 4,
+        "valRmse": 1.19,
+        "valAccuracy": "94.3%"
+      },
+      {
+        "fold": 5,
+        "valRmse": 1.2,
+        "valAccuracy": "94.1%"
+      }
+    ]
+  }
+}

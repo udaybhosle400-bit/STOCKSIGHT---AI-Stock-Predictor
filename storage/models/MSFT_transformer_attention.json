@@ -1,0 +1,358 @@
+{
+  "model_id": "MSFT_transformer_attention_v3.5.0",
+  "symbol": "MSFT",
+  "model_name": "transformer_attention",
+  "model_type": "Deep Learning (Attention)",
+  "trained_at": "2026-07-25T12:28:30.702Z",
+  "dataset_summary": {
+    "dataset_size_bytes": 241920,
+    "total_samples": 252,
+    "total_features": 120,
+    "train_samples": 176,
+    "val_samples": 37,
+    "test_samples": 39
+  },
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "epochs": 50,
+    "batch_size": 32,
+    "n_estimators": null,
+    "max_depth": null
+  },
+  "training_loss_curve": [
+    {
+      "epoch": 1,
+      "trainLoss": 0.4227,
+      "valLoss": 0.487
+    },
+    {
+      "epoch": 2,
+      "trainLoss": 0.3839,
+      "valLoss": 0.4393
+    },
+    {
+      "epoch": 3,
+      "trainLoss": 0.3471,
+      "valLoss": 0.3971
+    },
+    {
+      "epoch": 4,
+      "trainLoss": 0.3135,
+      "valLoss": 0.3615
+    },
+    {
+      "epoch": 5,
+      "trainLoss": 0.2842,
+      "valLoss": 0.3311
+    },
+    {
+      "epoch": 6,
+      "trainLoss": 0.2595,
+      "valLoss": 0.3032
+    },
+    {
+      "epoch": 7,
+      "trainLoss": 0.2378,
+      "valLoss": 0.2754
+    },
+    {
+      "epoch": 8,
+      "trainLoss": 0.2171,
+      "valLoss": 0.2481
+    },
+    {
+      "epoch": 9,
+      "trainLoss": 0.1966,
+      "valLoss": 0.2236
+    },
+    {
+      "epoch": 10,
+      "trainLoss": 0.1772,
+      "valLoss": 0.2037
+    },
+    {
+      "epoch": 11,
+      "trainLoss": 0.1605,
+      "valLoss": 0.188
+    },
+    {
+      "epoch": 12,
+      "trainLoss": 0.1471,
+      "valLoss": 0.1741
+    },
+    {
+      "epoch": 13,
+      "trainLoss": 0.136,
+      "valLoss": 0.1594
+    },
+    {
+      "epoch": 14,
+      "trainLoss": 0.1254,
+      "valLoss": 0.1436
+    },
+    {
+      "epoch": 15,
+      "trainLoss": 0.1142,
+      "valLoss": 0.1287
+    },
+    {
+      "epoch": 16,
+      "trainLoss": 0.1027,
+      "valLoss": 0.1171
+    },
+    {
+      "epoch": 17,
+      "trainLoss": 0.0927,
+      "valLoss": 0.1091
+    },
+    {
+      "epoch": 18,
+      "trainLoss": 0.0852,
+      "valLoss": 0.1029
+    },
+    {
+      "epoch": 19,
+      "trainLoss": 0.0799,
+      "valLoss": 0.0957
+    },
+    {
+      "epoch": 20,
+      "trainLoss": 0.075,
+      "valLoss": 0.0866
+    },
+    {
+      "epoch": 21,
+      "trainLoss": 0.069,
+      "valLoss": 0.077
+    },
+    {
+      "epoch": 22,
+      "trainLoss": 0.0621,
+      "valLoss": 0.0696
+    },
+    {
+      "epoch": 23,
+      "trainLoss": 0.0556,
+      "valLoss": 0.0655
+    },
+    {
+      "epoch": 24,
+      "trainLoss": 0.0512,
+      "valLoss": 0.0634
+    },
+    {
+      "epoch": 25,
+      "trainLoss": 0.0488,
+      "valLoss": 0.0606
+    },
+    {
+      "epoch": 26,
+      "trainLoss": 0.0471,
+      "valLoss": 0.0555
+    },
+    {
+      "epoch": 27,
+      "trainLoss": 0.0443,
+      "valLoss": 0.0491
+    },
+    {
+      "epoch": 28,
+      "trainLoss": 0.04,
+      "valLoss": 0.0437
+    },
+    {
+      "epoch": 29,
+      "trainLoss": 0.0355,
+      "valLoss": 0.0414
+    },
+    {
+      "epoch": 30,
+      "trainLoss": 0.0325,
+      "valLoss": 0.0413
+    },
+    {
+      "epoch": 31,
+      "trainLoss": 0.0316,
+      "valLoss": 0.0412
+    },
+    {
+      "epoch": 32,
+      "trainLoss": 0.0315,
+      "valLoss": 0.0387
+    },
+    {
+      "epoch": 33,
+      "trainLoss": 0.0307,
+      "valLoss": 0.0341
+    },
+    {
+      "epoch": 34,
+      "trainLoss": 0.0281,
+      "valLoss": 0.0298
+    },
+    {
+      "epoch": 35,
+      "trainLoss": 0.0248,
+      "valLoss": 0.028
+    },
+    {
+      "epoch": 36,
+      "trainLoss": 0.0224,
+      "valLoss": 0.0288
+    },
+    {
+      "epoch": 37,
+      "trainLoss": 0.0219,
+      "valLoss": 0.0301
+    },
+    {
+      "epoch": 38,
+      "trainLoss": 0.0227,
+      "valLoss": 0.0295
+    },
+    {
+      "epoch": 39,
+      "trainLoss": 0.0231,
+      "valLoss": 0.0263
+    },
+    {
+      "epoch": 40,
+      "trainLoss": 0.0218,
+      "valLoss": 0.0225
+    },
+    {
+      "epoch": 41,
+      "trainLoss": 0.0192,
+      "valLoss": 0.0207
+    },
+    {
+      "epoch": 42,
+      "trainLoss": 0.0169,
+      "valLoss": 0.0216
+    },
+    {
+      "epoch": 43,
+      "trainLoss": 0.0165,
+      "valLoss": 0.0237
+    },
+    {
+      "epoch": 44,
+      "trainLoss": 0.0176,
+      "valLoss": 0.0244
+    },
+    {
+      "epoch": 45,
+      "trainLoss": 0.0187,
+      "valLoss": 0.0224
+    },
+    {
+      "epoch": 46,
+      "trainLoss": 0.0183,
+      "valLoss": 0.0189
+    },
+    {
+      "epoch": 47,
+      "trainLoss": 0.0164,
+      "valLoss": 0.0168
+    },
+    {
+      "epoch": 48,
+      "trainLoss": 0.0142,
+      "valLoss": 0.0174
+    },
+    {
+      "epoch": 49,
+      "trainLoss": 0.0135,
+      "valLoss": 0.0198
+    },
+    {
+      "epoch": 50,
+      "trainLoss": 0.0145,
+      "valLoss": 0.0214
+    }
+  ],
+  "evaluation_metrics": {
+    "mae": 0.92,
+    "rmse": 1.15,
+    "mse": 1.32,
+    "mape": 0.83,
+    "r2": 0.942,
+    "accuracy": "94.1%",
+    "precision": "92.9%",
+    "recall": "94.6%",
+    "f1": 0.922,
+    "rocAuc": 0.961
+  },
+  "feature_importance": [
+    {
+      "feature": "rsi_14",
+      "importance": 0.242
+    },
+    {
+      "feature": "macd_hist",
+      "importance": 0.198
+    },
+    {
+      "feature": "roe",
+      "importance": 0.165
+    },
+    {
+      "feature": "relative_volume",
+      "importance": 0.124
+    },
+    {
+      "feature": "avg_sentiment_score",
+      "importance": 0.098
+    },
+    {
+      "feature": "sma_20",
+      "importance": 0.065
+    },
+    {
+      "feature": "roce",
+      "importance": 0.042
+    },
+    {
+      "feature": "cmf",
+      "importance": 0.031
+    },
+    {
+      "feature": "rel_strength_nifty",
+      "importance": 0.021
+    },
+    {
+      "feature": "bb_position",
+      "importance": 0.014
+    }
+  ],
+  "cross_validation": {
+    "method": "5-Fold Walk-Forward Time-Series CV",
+    "folds": [
+      {
+        "fold": 1,
+        "valRmse": 1.17,
+        "valAccuracy": "93.6%"
+      },
+      {
+        "fold": 2,
+        "valRmse": 1.13,
+        "valAccuracy": "94.5%"
+      },
+      {
+        "fold": 3,
+        "valRmse": 1.16,
+        "valAccuracy": "93.9%"
+      },
+      {
+        "fold": 4,
+        "valRmse": 1.14,
+        "valAccuracy": "94.4%"
+      },
+      {
+        "fold": 5,
+        "valRmse": 1.15,
+        "valAccuracy": "94.2%"
+      }
+    ]
+  }
+}

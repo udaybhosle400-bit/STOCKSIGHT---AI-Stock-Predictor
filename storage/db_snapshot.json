@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "investor@stocksight.com",
+      "password_hash": "$2a$10$demo_hash_key",
+      "name": "Investor",
+      "refresh_token": null,
+      "created_at": "2026-07-29T20:16:48.083Z"
+    }
+  ],
+  "user_preferences": [],
+  "watchlist": [
+    {
+      "id": 2,
+      "user_id": 1,
+      "symbol": "COASTCORP",
+      "created_at": "2026-07-29T20:16:08.509Z"
+    }
+  ],
+  "portfolio": [],
+  "paper_accounts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "balance": "1000000.00",
+      "initial_balance": "1000000.00",
+      "created_at": "2026-07-29T20:16:48.087Z"
+    }
+  ],
+  "paper_holdings": [],
+  "paper_trades": [],
+  "prediction_history": [],
+  "alerts": [],
+  "experiments": [],
+  "engineered_features": [],
+  "ai_models": [],
+  "ai_predictions": [],
+  "quant_backtest_runs": [],
+  "quant_backtest_trades": [],
+  "quant_portfolio_snapshots": [],
+  "quant_ai_validation": [],
+  "saved_reports": [],
+  "mlops_models": [
+    {
+      "id": "m-350",
+      "version": "v3.5.0 Ensemble",
+      "name": "Transformer + XGBoost + LSTM Stack",
+      "status": "CHAMPION",
+      "accuracy": "95.80",
+      "dir_accuracy": "93.8%",
+      "rmse": "1.1500",
+      "mae": "0.9200",
+      "mape": "0.8200",
+      "latency_p95_ms": 24,
+      "trained_at": "2026-07-26 08:30:00",
+      "author": "QuantML-Engine",
+      "created_at": "2026-07-29T20:16:48.339Z"
+    },
+    {
+      "id": "m-340",
+      "version": "v3.4.0 LSTM",
+      "name": "Deep Recurrent Neural Net",
+      "status": "ACTIVE",
+      "accuracy": "94.20",
+      "dir_accuracy": "92.1%",
+      "rmse": "1.2800",
+      "mae": "1.0200",
+      "mape": "0.9400",
+      "latency_p95_ms": 18,
+      "trained_at": "2026-07-24 14:15:00",
+      "author": "QuantML-Engine",
+      "created_at": "2026-07-29T20:16:48.342Z"
+    },
+    {
+      "id": "m-320",
+      "version": "v3.2.0 XGBoost",
+      "name": "Gradient Boosted Tree Ensemble",
+      "status": "ACTIVE",
+      "accuracy": "92.60",
+      "dir_accuracy": "90.5%",
+      "rmse": "1.4200",
+      "mae": "1.1500",
+      "mape": "1.0800",
+      "latency_p95_ms": 12,
+      "trained_at": "2026-07-20 11:00:00",
+      "author": "QuantML-Engine",
+      "created_at": "2026-07-29T20:16:48.344Z"
+    },
+    {
+      "id": "m-300",
+      "version": "v3.0.0 Transformer",
+      "name": "Temporal Attention Net",
+      "status": "STAGING",
+      "accuracy": "93.80",
+      "dir_accuracy": "91.8%",
+      "rmse": "1.3100",
+      "mae": "1.0400",
+      "mape": "0.9900",
+      "latency_p95_ms": 32,
+      "trained_at": "2026-07-15 09:45:00",
+      "author": "QuantML-Engine",
+      "created_at": "2026-07-29T20:16:48.346Z"
+    },
+    {
+      "id": "m-280",
+      "version": "v2.8.0 Random Forest",
+      "name": "Tree Decision Forest",
+      "status": "DEPRECATED",
+      "accuracy": "89.40",
+      "dir_accuracy": "87.2%",
+      "rmse": "1.6800",
+      "mae": "1.3800",
+      "mape": "1.2500",
+      "latency_p95_ms": 10,
+      "trained_at": "2026-06-30 16:20:00",
+      "author": "QuantML-Engine",
+      "created_at": "2026-07-29T20:16:48.347Z"
+    }
+  ]
+}
