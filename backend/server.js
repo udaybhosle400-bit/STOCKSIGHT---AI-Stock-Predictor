@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const path = require('path');
+const fs = require('fs');
 
 const config = require('../config/env.config');
 const logger = require('../utils/logger');
@@ -59,8 +60,25 @@ app.use((req, res, next) => {
 // Setup Swagger Documentation at /api-docs
 setupSwagger(app);
 
+// Resolve Frontend Static Files Path
+const getFrontendDir = () => {
+  if (fs.existsSync(path.join(__dirname, 'index.html'))) {
+    return __dirname;
+  } else if (fs.existsSync(path.join(__dirname, '../index.html'))) {
+    return path.join(__dirname, '..');
+  } else if (fs.existsSync(path.join(__dirname, '../frontend/index.html'))) {
+    return path.join(__dirname, '../frontend');
+  } else if (fs.existsSync(path.join(__dirname, './frontend/index.html'))) {
+    return path.join(__dirname, './frontend');
+  } else {
+    return path.join(__dirname, '..');
+  }
+};
+
+const frontendDir = getFrontendDir();
+
 // Static File Server
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(frontendDir));
 
 // Health Check Endpoint
 const healthHandler = (req, res) => {
@@ -123,7 +141,12 @@ app.get(/^((?!\/api).)*$/, (req, res, next) => {
   if (req.path.includes('.')) {
     return next();
   }
-  res.sendFile(path.join(__dirname, 'index.html'));
+  const indexPath = path.join(frontendDir, 'index.html');
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.sendFile(path.join(__dirname, '../index.html'));
+  }
 });
 
 // Error Handling Middlewares

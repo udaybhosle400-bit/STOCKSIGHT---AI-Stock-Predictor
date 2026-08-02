@@ -62,12 +62,14 @@ setupSwagger(app);
 
 // Resolve Frontend Static Files Path
 const getFrontendDir = () => {
-  if (fs.existsSync(path.join(__dirname, '../frontend/index.html'))) {
+  if (fs.existsSync(path.join(__dirname, 'index.html'))) {
+    return __dirname;
+  } else if (fs.existsSync(path.join(__dirname, '../index.html'))) {
+    return path.join(__dirname, '..');
+  } else if (fs.existsSync(path.join(__dirname, '../frontend/index.html'))) {
     return path.join(__dirname, '../frontend');
   } else if (fs.existsSync(path.join(__dirname, './frontend/index.html'))) {
     return path.join(__dirname, './frontend');
-  } else if (fs.existsSync(path.join(__dirname, '../index.html'))) {
-    return path.join(__dirname, '..');
   } else {
     return __dirname;
   }
