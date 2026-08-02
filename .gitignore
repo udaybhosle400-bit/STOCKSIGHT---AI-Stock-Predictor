@@ -28,3 +28,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.pid
+storage/pgdata/
+storage/pgdata2/
+storage/pgtest/
