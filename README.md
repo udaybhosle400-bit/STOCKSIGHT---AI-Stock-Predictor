@@ -1,6 +1,4 @@
-<div align="center">
 
-  <img src="https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/logo.png" alt="StockSight Logo" width="120" height="120" id="project-logo" />
 
   # 📈 StockSight
 
@@ -123,13 +121,13 @@ curl -X GET http://localhost:3000/api/v1/health
 
 ## 6. Key Features
 
-- 🧠 **Multi-Model Machine Learning Ensemble**: Combines Tree Ensembles (Random Forest, XGBoost, LightGBM, CatBoost) and Recurrent Deep Learning (LSTM, GRU, Temporal Transformer Attention).
-- 🔬 **Explainable AI (XAI)**: SHAP-inspired feature attribution detailing exact positive and negative drivers behind every buy/sell signal.
-- ⚡ **Quantitative Backtesting Simulator**: Tests 8 distinct quant strategies over historical OHLCV data with slippage, transaction costs, and short-term capital gains tax.
-- 🎯 **Modern Portfolio Theory (MPT) Optimizer**: Runs 10,000 Monte Carlo iterations to compute the Maximum Sharpe Ratio and Minimum Variance portfolios.
-- 📊 **Discounted Cash Flow (DCF) Valuation**: Evaluates fundamental intrinsic value, WACC, terminal value, and margin of safety.
-- 💼 **Virtual Paper Trading Desk**: Trade Indian (NSE/BSE) and US equities with a virtual balance of ₹10,00,000 / $100,000, tracking position PnL and execution logs.
-- 🛡️ **Dual-Mode Persistence Architecture**: Runs seamlessly on production PostgreSQL databases or instant local in-memory WASM PostgreSQL (`PGlite`).
+-  **Multi-Model Machine Learning Ensemble**: Combines Tree Ensembles (Random Forest, XGBoost, LightGBM, CatBoost) and Recurrent Deep Learning (LSTM, GRU, Temporal Transformer Attention).
+-  **Explainable AI (XAI)**: SHAP-inspired feature attribution detailing exact positive and negative drivers behind every buy/sell signal.
+-  **Quantitative Backtesting Simulator**: Tests 8 distinct quant strategies over historical OHLCV data with slippage, transaction costs, and short-term capital gains tax.
+-  **Modern Portfolio Theory (MPT) Optimizer**: Runs 10,000 Monte Carlo iterations to compute the Maximum Sharpe Ratio and Minimum Variance portfolios.
+-  **Discounted Cash Flow (DCF) Valuation**: Evaluates fundamental intrinsic value, WACC, terminal value, and margin of safety.
+-  **Virtual Paper Trading Desk**: Trade Indian (NSE/BSE) and US equities with a virtual balance of ₹10,00,000 / $100,000, tracking position PnL and execution logs.
+-  **Dual-Mode Persistence Architecture**: Runs seamlessly on production PostgreSQL databases or instant local in-memory WASM PostgreSQL (`PGlite`).
 
 ---
 
@@ -268,7 +266,7 @@ The Paper Trading module allows risk-free virtual order execution.
 ## 14. AI Models Used
 
 <details>
-<summary><b>🤖 Click to Expand Detailed AI Model Suite Specifications</b></summary>
+<summary><b> Click to Expand Detailed AI Model Suite Specifications</b></summary>
 
 <br/>
 
@@ -589,90 +587,90 @@ curl -X GET "http://localhost:3000/api/v1/predictions/predict/RELIANCE.NS" \
 
 ## 23. Screenshots
 
-# 📸 Screenshots
+#  Screenshots
 
 Explore the key features of **StockSight – AI Stock Predictor**.
 
 ---
 
-## 🏠 Home Dashboard
+##  Home Dashboard
 <p align="center">
 <img src="./screenshots/home-dashboard.png" width="900">
 </p>
 
 ---
 
-## 🌙 Dark Mode
+##  Dark Mode
 <p align="center">
 <img src="./screenshots/dark-mode.png" width="900">
 </p>
 
 ---
 
-## 🤖 AI Stock Prediction
+##  AI Stock Prediction
 <p align="center">
 <img src="./screenshots/ai-prediction.png" width="900">
 </p>
 
 ---
 
-## 📊 Explainable AI (XAI)
+##  Explainable AI (XAI)
 <p align="center">
 <img src="./screenshots/explainable-ai.png" width="900">
 </p>
 
 ---
 
-## 📈 Quantitative Backtesting
+##  Quantitative Backtesting
 <p align="center">
 <img src="./screenshots/backtesting.png" width="900">
 </p>
 
 ---
 
-## 📉 Equity Curve & Performance Metrics
+##  Equity Curve & Performance Metrics
 <p align="center">
 <img src="./screenshots/equity-curve.png" width="900">
 </p>
 
 ---
 
-## 💼 Portfolio Dashboard
+##  Portfolio Dashboard
 <p align="center">
 <img src="./screenshots/portfolio.png" width="900">
 </p>
 
 ---
 
-## ⚖️ Portfolio Optimization
+##  Portfolio Optimization
 <p align="center">
 <img src="./screenshots/Portfolio-Optimizer2.png" width="900">
 </p>
 
 ---
 
-## 📐 Optimal Asset Allocation
+##  Optimal Asset Allocation
 <p align="center">
 <img src="./screenshots/optimization.png" width="900">
 </p>
 
 ---
 
-## 🔍 Company Search & Analysis
+##  Company Search & Analysis
 <p align="center">
 <img src="./screenshots/search.png" width="900">
 </p>
 
 ---
 
-## 🤖 ROBI AI Assistant
+##  ROBI AI Assistant
 <p align="center">
 <img src="./screenshots/ROBI-AI.png" width="900">
 </p>
 
 ---
 
-## 📡 Enterprise MLOps Dashboard
+##  Enterprise MLOps Dashboard
 <p align="center">
 <img src="./screenshots/MLOPS.png" width="900">
 </p>
