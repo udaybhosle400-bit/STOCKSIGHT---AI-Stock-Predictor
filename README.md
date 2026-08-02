@@ -110,7 +110,7 @@ The Hero Banner showcases real-time market indices, quantitative prediction metr
 
 ## 5. Live Demo
 
-- **Interactive Local Instance:** `https://stocksight-ai-stock-predictor-production.up.railway.app/`
+- **Interactive Local Instance:** `http://localhost:3000`
 - **Swagger OpenAPI Documentation:** `http://localhost:3000/api-docs`
 - **System Health Telemetry:** `http://localhost:3000/api/v1/health`
 
@@ -590,48 +590,83 @@ curl -X GET "http://localhost:3000/api/v1/predictions/predict/RELIANCE.NS" \
 ## 23. Screenshots
 
 <div align="center">
-
-### Home Dashboard
-![Home Dashboard Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/home-dashboard.png)
-*Real-time market indices, trending equities, and high-level platform status.*
-
----
-
-### AI Prediction
-![AI Prediction Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/ai-prediction.png)
-*Ensemble machine learning model predictions, directional signals, and SHAP XAI attribution.*
-
----
-
-### Backtesting
-![Backtesting Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/backtesting.png)
-*Quantitative strategy backtest equity curves, trade logs, and risk metrics (Sharpe, Drawdown).*
-
----
-
-### Portfolio Optimization
-![Portfolio Optimization Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/portfolio-optimization.png)
-*Markowitz Efficient Frontier scatter plot, Monte Carlo simulation results, and optimal asset weights.*
-
----
-
-### Company Analysis
-![Company Analysis Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/company-analysis.png)
-*Comprehensive DCF fair value calculations, financial ratios, and technical indicator telemetry.*
-
----
-
-### Watchlist
-![Watchlist Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/watchlist.png)
-*Personal stock monitoring dashboard with price alert triggers and performance heatmaps.*
-
----
-
-### Paper Trading
-![Paper Trading Placeholder](https://raw.githubusercontent.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor/main/assets/screenshots/paper-trading.png)
-*Virtual portfolio execution desk with active position tracking, cash balance, and trade history.*
-
+  <p>Explore the visual interface, quantitative tools, AI engines, and analytics dashboard of StockSight.</p>
 </div>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/DASHBOARD.png" alt="Home Market Dashboard" width="100%" />
+      <br />
+      <sub><b>1. Home Market Dashboard</b><br />Real-time market indices, top gainers/losers, market telemetry & live news feed.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/Dark%20Mode.png" alt="Dark Mode Interface" width="100%" />
+      <br />
+      <sub><b>2. Dark Mode Platform Overview</b><br />Sleek glassmorphic dark-mode UI engineered for professional traders & quant analysts.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/AI%20PREDICTION.png" alt="AI Ensemble Stock Prediction" width="100%" />
+      <br />
+      <sub><b>3. Ensemble AI Stock Prediction Engine</b><br />Multi-horizon target price forecasts, directional buy/sell signals & confidence scoring.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/AI%20PREDICTION2.png" alt="SHAP Explainable AI XAI" width="100%" />
+      <br />
+      <sub><b>4. Explainable AI (XAI) Feature Attribution</b><br />SHAP-inspired feature breakdown highlighting technical & fundamental signal drivers.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/QUANT%20BACKTEST.png" alt="Quantitative Backtesting Setup" width="100%" />
+      <br />
+      <sub><b>5. Quantitative Strategy Backtester</b><br />Friction-aware strategy backtest configuration with slippage, brokerage & taxes.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/QUANT%20BACKTEST2.png" alt="Strategy Equity Curve & Metrics" width="100%" />
+      <br />
+      <sub><b>6. Backtest Performance & Equity Curve</b><br />Cumulative CAGR returns, Sharpe ratio, Sortino ratio, max drawdown & trade logs.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/Portfolio%20Optimizer.png" alt="Markowitz MPT Portfolio Optimizer" width="100%" />
+      <br />
+      <sub><b>7. Modern Portfolio Theory (MPT) Frontier</b><br />Markowitz Efficient Frontier scatter plot from 10,000 Monte Carlo simulations.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/Portfolio%20Optimizer2.png" alt="Optimal Asset Allocation Weights" width="100%" />
+      <br />
+      <sub><b>8. Max Sharpe & Min Volatility Allocation</b><br />Optimized asset allocation weights, correlation matrices & risk-adjusted rebalancing.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/COMPANY%20SEARCH.png" alt="Company Search & Analysis" width="100%" />
+      <br />
+      <sub><b>9. Company Search & Intrinsic Valuation</b><br />Equities lookup with DCF intrinsic fair value calculations & fundamental metrics.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/PORTFOLIO%20DASHBOARD.png" alt="Portfolio Holdings Dashboard" width="100%" />
+      <br />
+      <sub><b>10. Portfolio Holdings & Position Tracking</b><br />Real-time holdings breakdown, asset allocation charts & total net worth telemetry.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/MLOPS.png" alt="MLOps Model Registry & Monitoring" width="100%" />
+      <br />
+      <sub><b>11. MLOps Model Registry & Champion Telemetry</b><br />Enterprise model versioning, loss curves, P95 latency tracking & champion status.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="readme%20screenshot/ROBI%20AI.png" alt="ROBI AI Quant Assistant" width="100%" />
+      <br />
+      <sub><b>12. ROBI AI Quantitative Copilot</b><br />Interactive AI research assistant for instant market insights & technical synthesis.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
