@@ -589,86 +589,93 @@ curl -X GET "http://localhost:3000/api/v1/predictions/predict/RELIANCE.NS" \
 
 ## 23. Screenshots
 
-<div align="center">
-  <p>Explore the visual interface, quantitative tools, AI engines, and analytics dashboard of StockSight.</p>
-</div>
+# 📸 Screenshots
 
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/DASHBOARD.png" alt="Home Market Dashboard" width="100%" />
-      <br />
-      <sub><b>1. Home Market Dashboard</b><br />Real-time market indices, top gainers/losers, market telemetry & live news feed.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/Dark%20Mode.png" alt="Dark Mode Interface" width="100%" />
-      <br />
-      <sub><b>2. Dark Mode Platform Overview</b><br />Sleek glassmorphic dark-mode UI engineered for professional traders & quant analysts.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/AI%20PREDICTION.png" alt="AI Ensemble Stock Prediction" width="100%" />
-      <br />
-      <sub><b>3. Ensemble AI Stock Prediction Engine</b><br />Multi-horizon target price forecasts, directional buy/sell signals & confidence scoring.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/AI%20PREDICTION2.png" alt="SHAP Explainable AI XAI" width="100%" />
-      <br />
-      <sub><b>4. Explainable AI (XAI) Feature Attribution</b><br />SHAP-inspired feature breakdown highlighting technical & fundamental signal drivers.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/QUANT%20BACKTEST.png" alt="Quantitative Backtesting Setup" width="100%" />
-      <br />
-      <sub><b>5. Quantitative Strategy Backtester</b><br />Friction-aware strategy backtest configuration with slippage, brokerage & taxes.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/QUANT%20BACKTEST2.png" alt="Strategy Equity Curve & Metrics" width="100%" />
-      <br />
-      <sub><b>6. Backtest Performance & Equity Curve</b><br />Cumulative CAGR returns, Sharpe ratio, Sortino ratio, max drawdown & trade logs.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/Portfolio%20Optimizer.png" alt="Markowitz MPT Portfolio Optimizer" width="100%" />
-      <br />
-      <sub><b>7. Modern Portfolio Theory (MPT) Frontier</b><br />Markowitz Efficient Frontier scatter plot from 10,000 Monte Carlo simulations.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/Portfolio%20Optimizer2.png" alt="Optimal Asset Allocation Weights" width="100%" />
-      <br />
-      <sub><b>8. Max Sharpe & Min Volatility Allocation</b><br />Optimized asset allocation weights, correlation matrices & risk-adjusted rebalancing.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/COMPANY%20SEARCH.png" alt="Company Search & Analysis" width="100%" />
-      <br />
-      <sub><b>9. Company Search & Intrinsic Valuation</b><br />Equities lookup with DCF intrinsic fair value calculations & fundamental metrics.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/PORTFOLIO%20DASHBOARD.png" alt="Portfolio Holdings Dashboard" width="100%" />
-      <br />
-      <sub><b>10. Portfolio Holdings & Position Tracking</b><br />Real-time holdings breakdown, asset allocation charts & total net worth telemetry.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/MLOPS.png" alt="MLOps Model Registry & Monitoring" width="100%" />
-      <br />
-      <sub><b>11. MLOps Model Registry & Champion Telemetry</b><br />Enterprise model versioning, loss curves, P95 latency tracking & champion status.</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="readme%20screenshot/ROBI%20AI.png" alt="ROBI AI Quant Assistant" width="100%" />
-      <br />
-      <sub><b>12. ROBI AI Quantitative Copilot</b><br />Interactive AI research assistant for instant market insights & technical synthesis.</sub>
-    </td>
-  </tr>
-</table>
+Explore the key features of **StockSight – AI Stock Predictor**.
 
 ---
+
+## 🏠 Home Dashboard
+<p align="center">
+<img src="./screenshots/home-dashboard.png" width="900">
+</p>
+
+---
+
+## 🌙 Dark Mode
+<p align="center">
+<img src="./screenshots/dark-mode.png" width="900">
+</p>
+
+---
+
+## 🤖 AI Stock Prediction
+<p align="center">
+<img src="./screenshots/ai-prediction.png" width="900">
+</p>
+
+---
+
+## 📊 Explainable AI (XAI)
+<p align="center">
+<img src="./screenshots/explainable-ai.png" width="900">
+</p>
+
+---
+
+## 📈 Quantitative Backtesting
+<p align="center">
+<img src="./screenshots/backtesting.png" width="900">
+</p>
+
+---
+
+## 📉 Equity Curve & Performance Metrics
+<p align="center">
+<img src="./screenshots/equity-curve.png" width="900">
+</p>
+
+---
+
+## 💼 Portfolio Dashboard
+<p align="center">
+<img src="./screenshots/portfolio.png" width="900">
+</p>
+
+---
+
+## ⚖️ Portfolio Optimization
+<p align="center">
+<img src="./screenshots/Portfolio-Optimizer2.png" width="900">
+</p>
+
+---
+
+## 📐 Optimal Asset Allocation
+<p align="center">
+<img src="./screenshots/optimization.png" width="900">
+</p>
+
+---
+
+## 🔍 Company Search & Analysis
+<p align="center">
+<img src="./screenshots/search.png" width="900">
+</p>
+
+---
+
+## 🤖 ROBI AI Assistant
+<p align="center">
+<img src="./screenshots/ROBI-AI.png" width="900">
+</p>
+
+---
+
+## 📡 Enterprise MLOps Dashboard
+<p align="center">
+<img src="./screenshots/MLOPS.png" width="900">
+</p>
 
 ## 24. Performance
 
