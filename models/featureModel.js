@@ -36,95 +36,55 @@ class FeatureModel {
     let savedCount = 0;
     const isDb = db.isDbConnected();
 
+    // Always update In-Memory Storage for instant <1ms lookup
+    for (const rec of records) {
+      const sym = rec.symbol.toUpperCase();
+      if (!inMemoryFeatureStore.features.has(sym)) {
+        inMemoryFeatureStore.features.set(sym, new Map());
+      }
+      const symMap = inMemoryFeatureStore.features.get(sym);
+      const dateKey = typeof rec.date === 'string' ? rec.date : new Date(rec.date).toISOString().split('T')[0];
+
+      if (!symMap.has(dateKey)) {
+        symMap.set(dateKey, new Map());
+      }
+      const dateMap = symMap.get(dateKey);
+
+      const recordObj = {
+        symbol: sym,
+        date: dateKey,
+        feature_name: rec.featureName,
+        feature_value: parseFloat(rec.featureValue),
+        feature_category: rec.featureCategory,
+        timestamp: new Date().toISOString()
+      };
+
+      dateMap.set(rec.featureName, recordObj);
+      savedCount++;
+    }
+
     if (isDb) {
-      for (const rec of records) {
-        try {
-          await db.query(
-            `INSERT INTO engineered_features (symbol, date, feature_name, feature_value, feature_category)
-             VALUES ($1, $2, $3, $4, $5)
-             ON CONFLICT (symbol, date, feature_name)
-             DO UPDATE SET feature_value = EXCLUDED.feature_value, created_at = CURRENT_TIMESTAMP`,
-            [rec.symbol.toUpperCase(), rec.date, rec.featureName, parseFloat(rec.featureValue), rec.featureCategory]
-          );
-          savedCount++;
-        } catch (err) {
-          logger.error(`FeatureModel DB Insert Error for ${rec.symbol}/${rec.featureName}: ${err.message}`);
+      try {
+        const values = [];
+        const params = [];
+        let pIdx = 1;
+        for (const rec of records) {
+          values.push(`($${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++})`);
+          params.push(rec.symbol.toUpperCase(), rec.date, rec.featureName, parseFloat(rec.featureValue), rec.featureCategory);
         }
+        await db.query(
+          `INSERT INTO engineered_features (symbol, date, feature_name, feature_value, feature_category)
+           VALUES ${values.join(', ')}
+           ON CONFLICT (symbol, date, feature_name)
+           DO UPDATE SET feature_value = EXCLUDED.feature_value, created_at = CURRENT_TIMESTAMP`,
+          params
+        );
+      } catch (err) {
+        logger.error(`FeatureModel DB Insert Error: ${err.message}`);
       }
-    } else {
-      // In-Memory Storage
-      for (const rec of records) {
-        const sym = rec.symbol.toUpperCase();
-        if (!inMemoryFeatureStore.features.has(sym)) {
-          inMemoryFeatureStore.features.set(sym, new Map());
-        }
-        const symMap = inMemoryFeatureStore.features.get(sym);
-        const dateKey = typeof rec.date === 'string' ? rec.date : new Date(rec.date).toISOString().split('T')[0];
-
-        if (!symMap.has(dateKey)) {
-          symMap.set(dateKey, new Map());
-        }
-        const dateMap = symMap.get(dateKey);
-
-        const recordObj = {
-          symbol: sym,
-          date: dateKey,
-          feature_name: rec.featureName,
-          feature_value: parseFloat(rec.featureValue),
-          feature_category: rec.featureCategory,
-          timestamp: new Date().toISOString()
-        };
-
-        dateMap.set(rec.featureName, recordObj);
-
-        // Update category metrics
-        const cat = (rec.featureCategory || 'technical').toLowerCase();
-        if (inMemoryFeatureStore.stats.featuresByCategory[cat] !== undefined) {
-          inMemoryFeatureStore.stats.featuresByCategory[cat]++;
-        }
-        savedCount++;
-      }
-      inMemoryFeatureStore.stats.totalRecords += savedCount;
-      inMemoryFeatureStore.stats.lastGeneratedAt = new Date().toISOString();
     }
 
     return savedCount;
-  }
-
-  /**
-   * Get all engineered features for a symbol
-   * @param {string} symbol
-   * @param {string} [category]
-   */
-  async getSymbolFeatures(symbol, category) {
-    const sym = symbol.toUpperCase();
-
-    if (db.isDbConnected()) {
-      let q = `SELECT * FROM engineered_features WHERE symbol = $1`;
-      const params = [sym];
-      if (category) {
-        q += ` AND feature_category = $2`;
-        params.push(category.toLowerCase());
-      }
-      q += ` ORDER BY date DESC, feature_name ASC`;
-      const res = await db.query(q, params);
-      return res.rows;
-    } else {
-      const symMap = inMemoryFeatureStore.features.get(sym);
-      if (!symMap) return [];
-
-      const result = [];
-      const catFilter = category ? category.toLowerCase() : null;
-
-      for (const [dateStr, dateMap] of symMap.entries()) {
-        for (const [featName, rec] of dateMap.entries()) {
-          if (!catFilter || rec.feature_category.toLowerCase() === catFilter) {
-            result.push(rec);
-          }
-        }
-      }
-      return result;
-    }
   }
 
   /**
@@ -133,6 +93,33 @@ class FeatureModel {
    */
   async getLatestFeatures(symbol) {
     const sym = symbol.toUpperCase();
+
+    // Check RAM store first for instant <1ms access
+    const symMap = inMemoryFeatureStore.features.get(sym);
+    if (symMap && symMap.size > 0) {
+      const dates = Array.from(symMap.keys()).sort().reverse();
+      const latestDate = dates[0];
+      const dateMap = symMap.get(latestDate);
+
+      const featureMap = {};
+      const byCategory = {};
+
+      for (const [featName, rec] of dateMap.entries()) {
+        const val = rec.feature_value;
+        featureMap[featName] = val;
+        const cat = rec.feature_category || 'other';
+        if (!byCategory[cat]) byCategory[cat] = {};
+        byCategory[cat][featName] = val;
+      }
+
+      return {
+        symbol: sym,
+        totalFeatures: Object.keys(featureMap).length,
+        featureMap,
+        byCategory,
+        asOf: latestDate
+      };
+    }
 
     if (db.isDbConnected()) {
       const res = await db.query(

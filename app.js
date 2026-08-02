@@ -3976,12 +3976,6 @@ async function triggerInteractiveBacktest() {
     const json = await res.json();
     if (json.success && json.data) {
       let runData = json.data;
-      if (json.data.stats) {
-        const detailRes = await fetch(`/api/backtest/results?symbol=AAPL&strategy=${strat}`);
-        const detailJson = await detailRes.json();
-        runData = detailJson.data || json.data;
-      }
-
       currentBacktestRunData = runData;
       renderBacktestView(runData);
       showToast(`✅ Backtest completed for ${sym} using ${strat}`);
@@ -4495,16 +4489,15 @@ async function loadCompanyPrediction(symbol) {
   currentPredictionSymbol = sym;
 
   try {
-    const [latestRes, multiRes, chartRes, xaiRes, modelsRes, historyRes] = await Promise.all([
-      fetch(`/api/predictions/latest/${sym}`).then(r => r.json()).catch(() => ({ success: false })),
-      fetch(`/api/predictions/multi-horizon/${sym}`).then(r => r.json()).catch(() => ({ success: false })),
-      fetch(`/api/predictions/forecast-chart/${sym}`).then(r => r.json()).catch(() => ({ success: false })),
-      fetch(`/api/predictions/xai/${sym}`).then(r => r.json()).catch(() => ({ success: false })),
-      fetch(`/api/predictions/models?symbol=${sym}`).then(r => r.json()).catch(() => ({ success: false })),
-      fetch(`/api/predictions/history-comparison/${sym}`).then(r => r.json()).catch(() => ({ success: false }))
-    ]);
-
+    const latestRes = await fetch(`/api/predictions/latest/${sym}`).then(r => r.json()).catch(() => ({ success: false }));
     const latestData = (latestRes && (latestRes.data || latestRes)) || {};
+
+    const multiRes = { success: true, horizons: latestData.multiHorizonForecasts || latestData.horizons || latestData.forecast };
+    const chartRes = { success: true, historical: latestData.historical || latestData.history, forecastExtension: latestData.forecastExtension || latestData.forecastPrices, confidenceBandUpper: latestData.confidenceBandUpper, confidenceBandLower: latestData.confidenceBandLower };
+    const xaiRes = { success: true, topFeatures: latestData.topFeatures || latestData.featureImportance, positiveDrivers: latestData.positiveDrivers, negativeDrivers: latestData.negativeDrivers, explanationNarrative: latestData.explanationNarrative };
+    const modelsRes = { success: true, models: latestData.models };
+    const historyRes = { success: true, timeline: latestData.timeline || latestData.predictionHistory };
+
     currentPredictionFullPayload = { latestData, multiRes, chartRes, xaiRes, modelsRes, historyRes };
 
     // 1. Summary Card

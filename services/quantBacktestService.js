@@ -5,6 +5,10 @@ const backtestModel = require('../models/backtestModel');
 const logger = require('../utils/logger');
 
 class QuantBacktestService {
+  constructor() {
+    this.inFlightBacktests = new Map();
+  }
+
   /**
    * Safe division helper
    */
@@ -615,6 +619,26 @@ class QuantBacktestService {
   // =========================================================================
   async runBacktestForCompany(symbol, strategyName = 'AI_PREDICTION', initialCapital = 100000, riskConfig = {}, period = '1y') {
     const sym = symbol.toUpperCase();
+    const strat = (strategyName || 'AI_PREDICTION').toUpperCase();
+    const key = `${sym}:${strat}:${period}:${initialCapital}`;
+
+    if (this.inFlightBacktests.has(key)) {
+      return await this.inFlightBacktests.get(key);
+    }
+
+    const promise = (async () => {
+      try {
+        return await this._runBacktestForCompanyInternal(sym, strat, initialCapital, riskConfig, period);
+      } finally {
+        this.inFlightBacktests.delete(key);
+      }
+    })();
+
+    this.inFlightBacktests.set(key, promise);
+    return await promise;
+  }
+
+  async _runBacktestForCompanyInternal(sym, strategyName, initialCapital, riskConfig, period) {
     const company = companyRegistry.getCompany(sym) || { name: sym, sym: sym, cmp: 1000 };
 
     const ohlcv = await quantDataPipelineService.getHistoricalOHLCV(sym, period || '1y');
@@ -690,15 +714,19 @@ class QuantBacktestService {
     let failedCompanies = 0;
     const results = [];
 
-    for (const sym of symbols) {
-      try {
-        const res = await this.runBacktestForCompany(sym, strategyName);
-        results.push(res);
-        processedCompanies++;
-      } catch (err) {
-        logger.error(`QuantBacktestEngine: Error backtesting ${sym}: ${err.message}`);
-        failedCompanies++;
-      }
+    const chunkSize = 15;
+    for (let i = 0; i < symbols.length; i += chunkSize) {
+      const chunk = symbols.slice(i, i + chunkSize);
+      await Promise.all(chunk.map(async (sym) => {
+        try {
+          const res = await this.runBacktestForCompany(sym, strategyName);
+          results.push(res);
+          processedCompanies++;
+        } catch (err) {
+          logger.error(`QuantBacktestEngine: Error backtesting ${sym}: ${err.message}`);
+          failedCompanies++;
+        }
+      }));
     }
 
     const durationMs = Date.now() - startTime;

@@ -1,6 +1,8 @@
 const quantDataPipelineService = require('./quantDataPipelineService');
 const companyRegistry = require('../config/companyRegistry');
 
+const inMemoryPortfolioCache = new Map();
+
 class PortfolioOptimizerService {
 
   async optimizePortfolio(params) {
@@ -12,14 +14,19 @@ class PortfolioOptimizerService {
     } = params;
 
     const symbols = Array.isArray(selectedStocks) && selectedStocks.length > 0
-      ? selectedStocks.map(s => s.toUpperCase())
+      ? selectedStocks.map(s => s.toUpperCase()).sort()
       : ['AAPL', 'MSFT', 'RELIANCE.NS', 'ICICIBANK', 'INFY.NS'];
 
-    // 1. Fetch historical price series for each symbol
+    const cacheKey = `${symbols.join(',')}:${investmentAmount}:${riskLevel}:${investmentHorizon}`;
+    if (inMemoryPortfolioCache.has(cacheKey)) {
+      return inMemoryPortfolioCache.get(cacheKey);
+    }
+
+    // 1. Fetch historical price series for each symbol in parallel
     const priceSeriesMap = {};
     const returnsMap = {};
 
-    for (const sym of symbols) {
+    await Promise.all(symbols.map(async (sym) => {
       try {
         const ohlcv = await quantDataPipelineService.getHistoricalOHLCV(sym, '1y');
         if (ohlcv && ohlcv.length > 10) {
@@ -35,7 +42,7 @@ class PortfolioOptimizerService {
       } catch (err) {
         console.error(`Error fetching prices for ${sym} in optimizer:`, err);
       }
-    }
+    }));
 
     const validSymbols = Object.keys(returnsMap);
     if (validSymbols.length === 0) {
@@ -270,7 +277,7 @@ class PortfolioOptimizerService {
       currentVal *= (1 + monthlyReturnRate);
     }
 
-    return {
+    const result = {
       success: true,
       timestamp: new Date().toISOString(),
       parameters: { investmentAmount, riskLevel, investmentHorizon, symbols: validSymbols },
@@ -301,6 +308,9 @@ class PortfolioOptimizerService {
       aiRebalancingSuggestions,
       portfolioGrowthProjection
     };
+
+    inMemoryPortfolioCache.set(cacheKey, result);
+    return result;
   }
 
   _generateFallbackOptimization(symbols, amount, risk, horizon) {

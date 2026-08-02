@@ -60,21 +60,102 @@ class AIPredictionModel {
   }
 
   /**
+   * Save multiple trained model metadata records in a single batch query
+   */
+  async saveBatchModelMetadata(modelsList) {
+    if (!Array.isArray(modelsList) || modelsList.length === 0) return;
+    const isDb = db.isDbConnected();
+
+    if (isDb) {
+      try {
+        const values = [];
+        const params = [];
+        let pIdx = 1;
+
+        for (const item of modelsList) {
+          const sym = (item.symbol || '').toUpperCase();
+          const ver = item.modelVersion || item.version || 'v1.0.0';
+          values.push(`($${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++})`);
+          params.push(
+            sym,
+            item.modelName || item.name,
+            ver,
+            item.modelType || item.type,
+            JSON.stringify(item.metrics || {}),
+            JSON.stringify(item.hyperparameters || { n_estimators: 100, learning_rate: 0.05, max_depth: 6 })
+          );
+        }
+
+        const sql = `INSERT INTO ai_models (symbol, model_name, model_version, model_type, metrics, hyperparameters)
+                     VALUES ${values.join(', ')}
+                     ON CONFLICT (symbol, model_name, model_version)
+                     DO UPDATE SET metrics = EXCLUDED.metrics, trained_at = CURRENT_TIMESTAMP`;
+        await db.query(sql, params);
+      } catch (err) {
+        logger.error(`AIPredictionModel Batch DB Error: ${err.message}`);
+      }
+    } else {
+      for (const item of modelsList) {
+        await this.saveModelMetadata(item);
+      }
+    }
+  }
+
+  /**
    * Save an AI Ensemble prediction record
    */
   async saveAIPrediction(pred) {
     const sym = pred.symbol.toUpperCase();
     const isDb = db.isDbConnected();
 
+    const recordObj = {
+      id: inMemoryAIStore.stats.totalPredictions + 1,
+      symbol: sym,
+      current_price: pred.currentPrice,
+      currentPrice: pred.currentPrice,
+      predicted_price: pred.predictedPrice,
+      predictedPrice: pred.predictedPrice,
+      predicted_return: pred.predictedReturn,
+      predictedReturn: pred.predictedReturn,
+      signal: pred.signal,
+      confidence_score: pred.confidenceScore,
+      confidenceScore: pred.confidenceScore,
+      expected_volatility: pred.expectedVolatility,
+      expectedVolatility: pred.expectedVolatility,
+      expected_risk: pred.expectedRisk,
+      expectedRisk: pred.expectedRisk,
+      prob_increase: pred.probIncrease,
+      return_5d: pred.return5d,
+      return_7d: pred.return7d,
+      return_30d: pred.return30d,
+      top_features: pred.topFeatures || [],
+      topFeatures: pred.topFeatures || [],
+      positive_drivers: pred.positiveDrivers || pred.xaiReasons || [],
+      positiveDrivers: pred.positiveDrivers || pred.xaiReasons || [],
+      negative_drivers: pred.negativeDrivers || [],
+      negativeDrivers: pred.negativeDrivers || [],
+      explanation_narrative: pred.explanationNarrative || '',
+      explanationNarrative: pred.explanationNarrative || '',
+      xai_reasons: pred.xaiReasons || [],
+      xaiReasons: pred.xaiReasons || [],
+      best_model: pred.bestModel || 'Ensemble Stack',
+      model_version: pred.modelVersion || 'v1.0.0',
+      created_at: new Date().toISOString()
+    };
+
+    if (!inMemoryAIStore.predictions.has(sym)) {
+      inMemoryAIStore.predictions.set(sym, []);
+    }
+    inMemoryAIStore.predictions.get(sym).unshift(recordObj);
+
     if (isDb) {
       try {
-        const res = await db.query(
+        await db.query(
           `INSERT INTO ai_predictions (
             symbol, current_price, predicted_price, predicted_return, signal,
             confidence_score, expected_volatility, expected_risk, prob_increase,
             return_5d, return_7d, return_30d, top_features, xai_reasons, best_model, model_version
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
-          RETURNING *`,
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)`,
           [
             sym,
             pred.currentPrice,
@@ -94,46 +175,12 @@ class AIPredictionModel {
             pred.modelVersion || 'v1.0.0'
           ]
         );
-        return res.rows[0];
       } catch (err) {
         logger.error(`AIPredictionModel DB Insert Error for ${sym}: ${err.message}`);
-        return pred;
       }
-    } else {
-      if (!inMemoryAIStore.predictions.has(sym)) {
-        inMemoryAIStore.predictions.set(sym, []);
-      }
-      const recordObj = {
-        id: inMemoryAIStore.stats.totalPredictions + 1,
-        symbol: sym,
-        current_price: pred.currentPrice,
-        predicted_price: pred.predictedPrice,
-        predicted_return: pred.predictedReturn,
-        signal: pred.signal,
-        confidence_score: pred.confidenceScore,
-        expected_volatility: pred.expectedVolatility,
-        expected_risk: pred.expectedRisk,
-        prob_increase: pred.probIncrease,
-        return_5d: pred.return5d,
-        return_7d: pred.return7d,
-        return_30d: pred.return30d,
-        top_features: pred.topFeatures || [],
-        positive_drivers: pred.positiveDrivers || pred.xaiReasons || [],
-        negative_drivers: pred.negativeDrivers || [],
-        explanation_narrative: pred.explanationNarrative || '',
-        xai_reasons: pred.xaiReasons || [],
-        best_model: pred.bestModel || 'Ensemble Stack',
-        model_version: pred.modelVersion || 'v1.0.0',
-        created_at: new Date().toISOString()
-      };
-
-      inMemoryAIStore.predictions.get(sym).unshift(recordObj);
-      inMemoryAIStore.stats.totalPredictions++;
-      inMemoryAIStore.stats.totalCompaniesTrained = inMemoryAIStore.predictions.size;
-      inMemoryAIStore.stats.lastTrainedAt = new Date().toISOString();
-
-      return recordObj;
     }
+
+    return recordObj;
   }
 
   /**
@@ -141,6 +188,10 @@ class AIPredictionModel {
    */
   async getModelsForSymbol(symbol) {
     const sym = symbol.toUpperCase();
+    const map = inMemoryAIStore.models.get(sym);
+    if (map && map.size > 0) {
+      return Array.from(map.values());
+    }
 
     if (db.isDbConnected()) {
       try {
@@ -153,11 +204,8 @@ class AIPredictionModel {
         logger.error(`AIPredictionModel DB getModelsForSymbol Error: ${err.message}`);
         return [];
       }
-    } else {
-      const map = inMemoryAIStore.models.get(sym);
-      if (!map) return [];
-      return Array.from(map.values());
     }
+    return [];
   }
 
   /**
@@ -166,16 +214,25 @@ class AIPredictionModel {
   async getLatestPrediction(symbol) {
     const sym = symbol.toUpperCase();
 
+    const list = inMemoryAIStore.predictions.get(sym);
+    if (list && list.length > 0) {
+      return list[0];
+    }
+
     if (db.isDbConnected()) {
       const res = await db.query(
         `SELECT * FROM ai_predictions WHERE symbol = $1 ORDER BY created_at DESC LIMIT 1`,
         [sym]
       );
-      return res.rows[0] || null;
-    } else {
-      const list = inMemoryAIStore.predictions.get(sym);
-      return list && list.length > 0 ? list[0] : null;
+      if (res.rows[0]) {
+        if (!inMemoryAIStore.predictions.has(sym)) {
+          inMemoryAIStore.predictions.set(sym, []);
+        }
+        inMemoryAIStore.predictions.get(sym).unshift(res.rows[0]);
+        return res.rows[0];
+      }
     }
+    return null;
   }
 
   /**

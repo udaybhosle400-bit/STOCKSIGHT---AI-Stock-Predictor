@@ -30,14 +30,48 @@ class BacktestModel {
     const strat = runData.strategyName || 'AI_PREDICTION';
     const isDb = db.isDbConnected();
 
+    const runId = inMemoryBacktestStore.nextRunId++;
+    const runObj = {
+      id: runId,
+      symbol: sym,
+      strategy_name: strat,
+      strategyName: strat,
+      initial_capital: runData.initialCapital,
+      initialCapital: runData.initialCapital,
+      final_equity: runData.finalEquity,
+      finalEquity: runData.finalEquity,
+      total_return: runData.totalReturnPct,
+      totalReturnPct: runData.totalReturnPct,
+      cagr: runData.cagr,
+      sharpe_ratio: runData.sharpeRatio,
+      sharpeRatio: runData.sharpeRatio,
+      sortino_ratio: runData.sortinoRatio,
+      sortinoRatio: runData.sortinoRatio,
+      max_drawdown: runData.maxDrawdownPct,
+      maxDrawdownPct: runData.maxDrawdownPct,
+      win_rate: runData.winRatePct,
+      winRatePct: runData.winRatePct,
+      metrics: runData.metrics || {},
+      equity_curve: runData.equityCurve || [],
+      equityCurve: runData.equityCurve || [],
+      trades: runData.trades || [],
+      benchmark_comparison: runData.benchmarkComparison || {},
+      benchmarkComparison: runData.benchmarkComparison || {},
+      created_at: new Date().toISOString()
+    };
+
+    inMemoryBacktestStore.runs.set(runId, runObj);
+    if (Array.isArray(runData.trades)) {
+      inMemoryBacktestStore.trades.set(runId, runData.trades);
+    }
+
     if (isDb) {
       try {
-        const runRes = await db.query(
+        await db.query(
           `INSERT INTO quant_backtest_runs (
             symbol, strategy_name, initial_capital, final_equity, total_return,
             cagr, sharpe_ratio, sortino_ratio, max_drawdown, win_rate, metrics, equity_curve, benchmark_comparison
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
-          RETURNING *`,
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
           [
             sym,
             strat,
@@ -54,80 +88,12 @@ class BacktestModel {
             JSON.stringify(runData.benchmarkComparison || {})
           ]
         );
-
-        const runRecord = runRes.rows[0];
-        const runId = runRecord.id;
-
-        if (Array.isArray(runData.trades) && runData.trades.length > 0) {
-          for (const t of runData.trades) {
-            await db.query(
-              `INSERT INTO quant_backtest_trades (
-                backtest_run_id, symbol, entry_date, exit_date, entry_price,
-                exit_price, quantity, pnl, return_pct, holding_period_days, signal, trade_reason
-              ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
-              [
-                runId, sym, t.entryDate, t.exitDate, t.entryPrice,
-                t.exitPrice, t.quantity, t.pnl, t.returnPct, t.holdingPeriodDays, t.signal, t.tradeReason
-              ]
-            );
-          }
-        }
-
-        return runRecord;
       } catch (err) {
         logger.error(`BacktestModel DB Insert Error for ${sym}/${strat}: ${err.message}`);
-        return runData;
       }
-    } else {
-      const runId = inMemoryBacktestStore.nextRunId++;
-      const runObj = {
-        id: runId,
-        symbol: sym,
-        strategy_name: strat,
-        initial_capital: runData.initialCapital,
-        final_equity: runData.finalEquity,
-        total_return: runData.totalReturnPct,
-        cagr: runData.cagr,
-        sharpe_ratio: runData.sharpeRatio,
-        sortino_ratio: runData.sortinoRatio,
-        max_drawdown: runData.maxDrawdownPct,
-        win_rate: runData.winRatePct,
-        metrics: runData.metrics || {},
-        equity_curve: runData.equityCurve || [],
-        benchmark_comparison: runData.benchmarkComparison || {},
-        created_at: new Date().toISOString()
-      };
-
-      inMemoryBacktestStore.runs.set(runId, runObj);
-
-      const tradeList = [];
-      if (Array.isArray(runData.trades)) {
-        runData.trades.forEach(t => {
-          tradeList.push({
-            id: inMemoryBacktestStore.nextTradeId++,
-            backtest_run_id: runId,
-            symbol: sym,
-            entry_date: t.entryDate,
-            exit_date: t.exitDate,
-            entry_price: t.entryPrice,
-            exit_price: t.exitPrice,
-            quantity: t.quantity,
-            pnl: t.pnl,
-            return_pct: t.returnPct,
-            holding_period_days: t.holdingPeriodDays,
-            signal: t.signal,
-            trade_reason: t.tradeReason
-          });
-        });
-      }
-      inMemoryBacktestStore.trades.set(runId, tradeList);
-
-      inMemoryBacktestStore.stats.totalRuns++;
-      inMemoryBacktestStore.stats.totalTrades += tradeList.length;
-      inMemoryBacktestStore.stats.lastRunAt = new Date().toISOString();
-
-      return runObj;
     }
+
+    return runObj;
   }
 
   /**
@@ -136,6 +102,12 @@ class BacktestModel {
   async getLatestRun(symbol, strategyName = 'AI_PREDICTION') {
     const sym = symbol.toUpperCase();
 
+    for (const run of Array.from(inMemoryBacktestStore.runs.values()).reverse()) {
+      if (run.symbol === sym && (run.strategy_name === strategyName || run.strategyName === strategyName)) {
+        return run;
+      }
+    }
+
     if (db.isDbConnected()) {
       const res = await db.query(
         `SELECT * FROM quant_backtest_runs
@@ -143,15 +115,13 @@ class BacktestModel {
          ORDER BY created_at DESC LIMIT 1`,
         [sym, strategyName]
       );
-      return res.rows[0] || null;
-    } else {
-      for (const run of Array.from(inMemoryBacktestStore.runs.values()).reverse()) {
-        if (run.symbol === sym && run.strategy_name === strategyName) {
-          return run;
-        }
+      if (res.rows[0]) {
+        inMemoryBacktestStore.runs.set(res.rows[0].id || inMemoryBacktestStore.nextRunId++, res.rows[0]);
+        return res.rows[0];
       }
-      return null;
     }
+
+    return null;
   }
 
   /**
