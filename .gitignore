@@ -28,3 +28,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.pid
+logs/
+storage/
+*.log
+*.pid
