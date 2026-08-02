@@ -110,7 +110,7 @@ The Hero Banner showcases real-time market indices, quantitative prediction metr
 
 ## 5. Live Demo
 
-- **Interactive Local Instance:** `http://localhost:3000`
+- **Interactive Local Instance:** `https://stocksight-ai-stock-predictor-production.up.railway.app/`
 - **Swagger OpenAPI Documentation:** `http://localhost:3000/api-docs`
 - **System Health Telemetry:** `http://localhost:3000/api/v1/health`
 
