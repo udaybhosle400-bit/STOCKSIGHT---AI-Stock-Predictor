@@ -15791,3 +15791,604 @@
 {"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 00:10:15"}
 {"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 00:10:15"}
 {"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 00:10:15"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:12:08"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:12:09"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:12:21"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /styles.css","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /uday_qr.png","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /app.js","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/screens?type=FII%20Buying&sortBy=mcap&sortOrder=desc&limit=200","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/paper/account","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/paper/holdings","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"info","message":"[GET] /api/paper/trades","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:12:22"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:12:23"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:12:25"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for AAPL.","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for AAPL.","service":"stocksight-backend","timestamp":"2026-07-31 01:12:26"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:30"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"[GET] /api/predictions/xai/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for MSFT.","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for MSFT.","service":"stocksight-backend","timestamp":"2026-07-31 01:12:35"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:40"}
+{"level":"info","message":"[POST] /api/backtest/run","service":"stocksight-backend","timestamp":"2026-07-31 01:12:40"}
+{"level":"info","message":"[GET] /api/backtest/strategies/compare?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:12:41"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:12:43"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/latest/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/xai/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:12:47"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /styles.css","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /uday_qr.png","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /app.js","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/screens?type=FII%20Buying&sortBy=mcap&sortOrder=desc&limit=200","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/paper/account","service":"stocksight-backend","timestamp":"2026-07-31 01:31:25"}
+{"level":"info","message":"[GET] /api/paper/holdings","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"info","message":"[GET] /api/paper/trades","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:31:26"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:31:27"}
+{"level":"info","message":"[GET] /api/predictions/latest/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[GET] /api/predictions/xai/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/MSFT","service":"stocksight-backend","timestamp":"2026-07-31 01:31:30"}
+{"level":"info","message":"[POST] /api/backtest/run","service":"stocksight-backend","timestamp":"2026-07-31 01:41:33"}
+{"level":"info","message":"[GET] /api/backtest/strategies/compare?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:41:35"}
+{"level":"info","message":"[GET] /api/predictions/xai/BRK-B","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"[GET] /api/predictions/latest/BRK-B","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BRK-B","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BRK-B","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for BRK-B.","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for BRK-B.","service":"stocksight-backend","timestamp":"2026-07-31 01:41:45"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:41:45"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BRK-B","service":"stocksight-backend","timestamp":"2026-07-31 01:41:46"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:08"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:42:23"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BRK-B: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:08"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:16"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BRK-B: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:16"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:26"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BRK-B: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:42:26"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:42:28"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:43:06"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:43:08"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /styles.css","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /uday_qr.png","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /app.js","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/screens?type=FII%20Buying&sortBy=mcap&sortOrder=desc&limit=200","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/paper/account","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/paper/holdings","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /api/paper/trades","service":"stocksight-backend","timestamp":"2026-07-31 01:43:19"}
+{"level":"info","message":"[GET] /favicon.ico","service":"stocksight-backend","timestamp":"2026-07-31 01:43:20"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:43:20"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:43:20"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:43:20"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:43:20"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:43:21"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for AAPL.","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for AAPL.","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:22"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:43:27"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:43:34"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for AAPL: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:43:34"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:38"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:43:38"}
+{"level":"info","message":"[POST] /api/backtest/run","service":"stocksight-backend","timestamp":"2026-07-31 01:43:38"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/backtest/strategies/compare?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:39"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:46"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:47"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:47"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:43:47"}
+{"level":"info","message":"[GET] /api/predictions/latest/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for JPM.","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for JPM.","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"info","message":"[GET] /api/predictions/xai/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:43:53"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/JPM?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:44:15"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for JPM: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:44:15"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/JPM?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:44:16"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for JPM: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:44:16"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:44:24"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:44:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:44:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:44:24"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/predictions/latest/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/predictions/xai/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"[GET] /api/market/details/%5EGSPC?range=1mo&interval=1d","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for ^GSPC.","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK?range=1y&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ICICIBANK: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:25"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK?range=1y&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:26"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ICICIBANK: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:26"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK?range=1y&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:26"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ICICIBANK: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:26"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:44:27"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:44:30"}
+{"level":"info","message":"[POST] /api/mlops/retrain","service":"stocksight-backend","timestamp":"2026-07-31 01:44:33"}
+{"level":"info","message":"[POST] /api/mlops/promote","service":"stocksight-backend","timestamp":"2026-07-31 01:44:44"}
+{"level":"info","message":"[POST] /api/mlops/promote","service":"stocksight-backend","timestamp":"2026-07-31 01:44:45"}
+{"level":"info","message":"[POST] /api/mlops/promote","service":"stocksight-backend","timestamp":"2026-07-31 01:44:45"}
+{"level":"info","message":"[POST] /api/mlops/promote","service":"stocksight-backend","timestamp":"2026-07-31 01:44:45"}
+{"level":"info","message":"[POST] /api/mlops/promote","service":"stocksight-backend","timestamp":"2026-07-31 01:44:45"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/latest/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/xai/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JPM","service":"stocksight-backend","timestamp":"2026-07-31 01:44:48"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:44:52"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:44:52"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:44:52"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:44:52"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for BAJFINANCE.NS.","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for BAJFINANCE.NS.","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for BAJFINANCE.","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for BAJFINANCE.","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE?range=1y&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJFINANCE: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:44:53"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:15"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:15"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=1y&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:16"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:16"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:16"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:16"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=1y&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:23"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:23"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:23"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:23"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:30"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:30"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:30"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJFINANCE.NS?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:30"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJFINANCE.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:45:30"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:31"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:32"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:32"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:45:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:32"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:32"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:45:33"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:45:39"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:45:54"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJFINANCE.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:46:00"}
+{"level":"info","message":"[GET] /api/predictions/latest/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:06"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:06"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:07"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:07"}
+{"level":"info","message":"[GET] /api/predictions/xai/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:07"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for JNJ.","service":"stocksight-backend","timestamp":"2026-07-31 01:46:07"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for JNJ.","service":"stocksight-backend","timestamp":"2026-07-31 01:46:07"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/JNJ?range=3mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:29"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for JNJ: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:29"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/JNJ?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:29"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for JNJ: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:29"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/JNJ?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:30"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for JNJ: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:46:30"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:30"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:46:30"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:46:30"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:46:30"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:31"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:31"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:31"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:31"}
+{"level":"info","message":"[GET] /api/predictions/xai/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:31"}
+{"level":"info","message":"[GET] /api/predictions/latest/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:46:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"[GET] /api/predictions/xai/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for NVDA.","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for NVDA.","service":"stocksight-backend","timestamp":"2026-07-31 01:46:39"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:03"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for NVDA: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:03"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:10"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for NVDA: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:10"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:11"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:47:18"}
+{"level":"info","message":"[POST] /api/mlops/retrain","service":"stocksight-backend","timestamp":"2026-07-31 01:47:18"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:47:20"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:47:22"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/latest/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/xai/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:47:36"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJAJ-AUTO.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJAJ-AUTO.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJAJ-AUTO.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJAJ-AUTO.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJAJ-AUTO.NS","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for BAJAJ-AUTO.NS.","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for BAJAJ-AUTO.NS.","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for BAJAJ-AUTO.","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for BAJAJ-AUTO.","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=1y&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:47:42"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:57"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:48:00"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJAJ-AUTO.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:47:57"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=6mo&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:05"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:05"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJAJ-AUTO.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:06"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:13"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for BAJAJ-AUTO.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:13"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:48:21"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:21"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:21"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:21"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO.NS: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:21"}
+{"level":"info","message":"[GET] /","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /styles.css","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /uday_qr.png","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /app.js","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/screens?type=FII%20Buying&sortBy=mcap&sortOrder=desc&limit=200","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/stocks","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/paper/account","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/paper/holdings","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /api/paper/trades","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"[GET] /favicon.ico","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/TCS?range=1d&interval=1m: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for TCS: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:48:29"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-07-31 01:48:31"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:48:32"}
+{"level":"info","message":"[GET] /api/predictions/latest/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"[GET] /api/predictions/xai/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for AMZN.","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for AMZN.","service":"stocksight-backend","timestamp":"2026-07-31 01:48:36"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-07-31 01:48:37"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:52"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for AMZN: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:48:52"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:00"}
+{"level":"info","message":"[POST] /api/backtest/run","service":"stocksight-backend","timestamp":"2026-07-31 01:49:02"}
+{"level":"info","message":"[GET] /api/backtest/strategies/compare?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:49:03"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:49:14"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for AMZN: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:49:14"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/latest/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/xai/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[GET] /api/market/details/%5EGSPC?range=1mo&interval=1d","service":"stocksight-backend","timestamp":"2026-07-31 01:49:15"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:49:19"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:49:22"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:49:39"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:49:39"}
+{"level":"info","message":"[GET] /api/predictions/latest/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/xai/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AMZN","service":"stocksight-backend","timestamp":"2026-07-31 01:49:40"}
+{"level":"info","message":"[GET] /api/predictions/latest/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/xai/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/JNJ","service":"stocksight-backend","timestamp":"2026-07-31 01:49:47"}
+{"level":"info","message":"[GET] /api/predictions/latest/BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"info","message":"[GET] /api/predictions/xai/BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/BAJAJ-AUTO","service":"stocksight-backend","timestamp":"2026-07-31 01:49:53"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=3mo&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=3mo&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"warn","message":"API call failed [404] for https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO?range=3mo&interval=1d: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for BAJAJ-AUTO: Request failed with status code 404","service":"stocksight-backend","timestamp":"2026-07-31 01:49:54"}
+{"level":"info","message":"[GET] /api/predictions/latest/META","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/META","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/META","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"[GET] /api/predictions/xai/META","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=META","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for META.","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for META.","service":"stocksight-backend","timestamp":"2026-07-31 01:50:01"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=1y&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:14"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:14"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:14"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:14"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=1y&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:25"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:25"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:25"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:25"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:59"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:50:59"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/META?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:00"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for META: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:00"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:01"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/latest/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/xai/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/latest/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/xai/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/META","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[GET] /api/mlops/dashboard","service":"stocksight-backend","timestamp":"2026-07-31 01:51:02"}
+{"level":"info","message":"[POST] /api/mlops/retrain","service":"stocksight-backend","timestamp":"2026-07-31 01:51:03"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:51:16"}
+{"level":"info","message":"[GET] /api/predictions/latest/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/xai/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/NVDA","service":"stocksight-backend","timestamp":"2026-07-31 01:51:21"}
+{"level":"info","message":"[GET] /api/predictions/latest/ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"[GET] /api/predictions/xai/ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"FMPService: No FMP_API_KEY configured. Returning estimated/fallback metrics for ADBE.","service":"stocksight-backend","timestamp":"2026-07-31 01:51:28"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for ADBE.","service":"stocksight-backend","timestamp":"2026-07-31 01:51:29"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:41"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:41"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:41"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:41"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:52"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:51:52"}
+{"level":"warn","message":"API call failed [200] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=1d&interval=1m: aborted","service":"stocksight-backend","timestamp":"2026-07-31 01:51:52"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for ADBE: aborted","service":"stocksight-backend","timestamp":"2026-07-31 01:51:52"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:04"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:04"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:04"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:04"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=6mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:05"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ADBE: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:05"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/ADBE","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:06"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:07"}
+{"level":"info","message":"[GET] /api/market/details/%5EIXIC?range=1mo&interval=1d","service":"stocksight-backend","timestamp":"2026-07-31 01:52:07"}
+{"level":"info","message":"FinnhubService: No FINNHUB_API_KEY configured. Returning standard market news for ^IXIC.","service":"stocksight-backend","timestamp":"2026-07-31 01:52:07"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:52:07"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:52:07"}
+{"level":"info","message":"[POST] /api/backtest/run","service":"stocksight-backend","timestamp":"2026-07-31 01:52:08"}
+{"level":"info","message":"[GET] /api/market/details/%5EIXIC?range=1mo&interval=1d","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"info","message":"[GET] /api/backtest/strategies/compare?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:09"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ^IXIC: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1d&interval=1m: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"warn","message":"YahooService: Live quote fetch failed for ^IXIC: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"warn","message":"API call failed [NETWORK_ERROR] for https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"warn","message":"YahooService: Historical OHLC fetch failed for ^IXIC: timeout of 10000ms exceeded","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:24"}
+{"level":"info","message":"[POST] /api/portfolio-optimizer/optimize","service":"stocksight-backend","timestamp":"2026-07-31 01:52:26"}
+{"level":"info","message":"[GET] /api/predictions/screener","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"ip":"127.0.0.1","level":"error","message":"[GET] /api/predictions/screener - 500: (pred.current_price || company.cmp).toFixed is not a function","service":"stocksight-backend","stack":"TypeError: (pred.current_price || company.cmp).toFixed is not a function\n    at getPredictionScreener (C:\\Stock prediction\\controllers\\predictionController.js:340:72)","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/latest/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/multi-horizon/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/forecast-chart/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/xai/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/models?symbol=AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[GET] /api/predictions/history-comparison/AAPL","service":"stocksight-backend","timestamp":"2026-07-31 01:52:30"}
+{"level":"info","message":"[POST] /api/auth/login","service":"stocksight-backend","timestamp":"2026-07-31 01:52:39"}
+{"level":"info","message":"Auth: User logged in [ID: 3, Email: udaybhosale@gmail.com]","service":"stocksight-backend","timestamp":"2026-07-31 01:52:39"}
+{"level":"info","message":"Initialized In-Memory Embedded PostgreSQL Engine","service":"stocksight-backend","timestamp":"2026-08-02 13:14:58"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"🚀 StockSight Institutional Quant Platform Active","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"🌐 Independent Access: http://localhost:3000","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"📖 Swagger UI Docs: http://localhost:3000/api-docs","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"🏥 Health Check: http://localhost:3000/api/v1/health","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"🗄️  PostgreSQL DB Status: Connected (PostgreSQL Active)","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"💼 Paper Trading Desk: Active (Default Capital: ₹10,00,000)","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
+{"level":"info","message":"=======================================================","service":"stocksight-backend","timestamp":"2026-08-02 13:15:00"}
