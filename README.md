@@ -719,6 +719,19 @@ This project is licensed under the **ISC License**. See the [LICENSE](LICENSE) f
 - 💼 **Project Repository:** [STOCKSIGHT---AI-Stock-Predictor](https://github.com/udaybhosle400-bit/STOCKSIGHT---AI-Stock-Predictor)
 
 ---
+## 29 Connect with Me
+
+<p align="center">
+
+<a href="https://github.com/udaybhosle400-bit">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/uday-bhosale-a94b6130b/">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+</p>
 
 <div align="center">
   <sub>Built with ❤️ for quantitative traders, developers, and equity analysts worldwide.</sub>
