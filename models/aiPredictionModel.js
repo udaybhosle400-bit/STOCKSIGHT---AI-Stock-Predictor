@@ -1,15 +1,17 @@
 const db = require('../config/database');
 const logger = require('../utils/logger');
 
+const BoundedLRUCache = require('../utils/boundedCache');
+
 /**
  * In-Memory Fallback AI Prediction & Model Store
  * Used when PostgreSQL database is offline.
  */
 const inMemoryAIStore = {
-  // Map: symbol -> Array<predictionRecord>
-  predictions: new Map(),
-  // Map: symbol -> Map(modelName -> modelMetadata)
-  models: new Map(),
+  // Bounded Cache: symbol -> Array<predictionRecord>
+  predictions: new BoundedLRUCache(50, 30 * 60 * 1000),
+  // Bounded Cache: symbol -> Map(modelName -> modelMetadata)
+  models: new BoundedLRUCache(50, 30 * 60 * 1000),
   stats: {
     totalCompaniesTrained: 0,
     totalPredictions: 0,

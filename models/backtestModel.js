@@ -1,15 +1,17 @@
 const db = require('../config/database');
 const logger = require('../utils/logger');
 
+const BoundedLRUCache = require('../utils/boundedCache');
+
 /**
  * In-Memory Fallback Backtest Store
  * Used when PostgreSQL database is offline.
  */
 const inMemoryBacktestStore = {
-  // Map: runId -> runRecord
-  runs: new Map(),
-  // Map: runId -> Array<tradeRecord>
-  trades: new Map(),
+  // Bounded Cache: runId -> runRecord
+  runs: new BoundedLRUCache(50, 30 * 60 * 1000),
+  // Bounded Cache: runId -> Array<tradeRecord>
+  trades: new BoundedLRUCache(50, 30 * 60 * 1000),
   nextRunId: 1,
   nextTradeId: 1,
   stats: {

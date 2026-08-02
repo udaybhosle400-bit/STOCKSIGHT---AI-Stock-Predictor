@@ -5,16 +5,18 @@ const finnhubService = require('./finnhubService');
 const companyRegistry = require('../config/companyRegistry');
 const logger = require('../utils/logger');
 
+const BoundedLRUCache = require('../utils/boundedCache');
+
 /**
  * In-Memory Fallback Storage for Quantitative Data Pipeline
  * Active whenever PostgreSQL database is offline.
  */
 const inMemoryQuantStore = {
-  ohlcv: new Map(),           // symbol -> Map(timestamp -> record)
-  fundamentals: new Map(),    // symbol -> Map(timestamp -> record)
-  statements: new Map(),      // symbol -> Map(key -> record)
-  marketData: new Map(),      // symbol -> record
-  news: new Map(),            // symbol -> Map(url -> record)
+  ohlcv: new BoundedLRUCache(50, 30 * 60 * 1000),           // symbol -> Map(timestamp -> record)
+  fundamentals: new BoundedLRUCache(50, 30 * 60 * 1000),    // symbol -> Map(timestamp -> record)
+  statements: new BoundedLRUCache(50, 30 * 60 * 1000),      // symbol -> Map(key -> record)
+  marketData: new BoundedLRUCache(50, 30 * 60 * 1000),      // symbol -> record
+  news: new BoundedLRUCache(50, 30 * 60 * 1000),            // symbol -> Map(url -> record)
   lastRunTimestamp: null,
   ingestionStats: {
     totalOHLCVRows: 0,
@@ -144,14 +146,12 @@ class QuantDataPipelineService {
     }
 
     // Always populate inMemoryQuantStore for instant <1ms RAM lookups
-    if (!inMemoryQuantStore.ohlcv.has(sym)) {
-      inMemoryQuantStore.ohlcv.set(sym, new Map());
-    }
-    const symMap = inMemoryQuantStore.ohlcv.get(sym);
+    const symMap = inMemoryQuantStore.ohlcv.get(sym) || new Map();
     for (const c of candles) {
       symMap.set(c.timestamp, c);
       savedCount++;
     }
+    inMemoryQuantStore.ohlcv.set(sym, symMap);
 
     inMemoryQuantStore.ingestionStats.totalOHLCVRows += savedCount;
     return savedCount;

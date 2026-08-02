@@ -1,7 +1,8 @@
 const quantDataPipelineService = require('./quantDataPipelineService');
 const companyRegistry = require('../config/companyRegistry');
+const BoundedLRUCache = require('../utils/boundedCache');
 
-const inMemoryPortfolioCache = new Map();
+const inMemoryPortfolioCache = new BoundedLRUCache(30, 15 * 60 * 1000);
 
 class PortfolioOptimizerService {
 

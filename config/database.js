@@ -717,28 +717,35 @@ async function initDatabase() {
       ON CONFLICT (user_id) DO NOTHING;
     `);
 
-    // 5. Seed Company Registry if empty
+    // 5. Seed Company Registry if empty (Single Batch Insert)
     const compCheck = await query(`SELECT COUNT(*) as cnt FROM company_registry`);
     if (parseInt((compCheck.rows[0] && compCheck.rows[0].cnt) || 0, 10) === 0) {
       try {
         const companyRegistryData = require('./companyRegistry');
         const allComps = companyRegistryData.getAllCompanies();
+        const values = [];
+        const params = [];
+        let idx = 1;
         for (const c of allComps) {
           if (c.sym) {
-            await query(
-              `INSERT INTO company_registry (sym, ns, name, sector)
-               VALUES ($1, $2, $3, $4)
-               ON CONFLICT (sym) DO NOTHING`,
-              [c.sym, c.ns || null, c.name || c.sym, c.sector || 'General']
-            );
+            values.push(`($${idx++}, $${idx++}, $${idx++}, $${idx++})`);
+            params.push(c.sym, c.ns || null, c.name || c.sym, c.sector || 'General');
           }
+        }
+        if (values.length > 0) {
+          await query(
+            `INSERT INTO company_registry (sym, ns, name, sector)
+             VALUES ${values.join(', ')}
+             ON CONFLICT (sym) DO NOTHING`,
+            params
+          );
         }
       } catch (e) {
         if (logger && logger.error) logger.error(`Company registry seed error: ${e.message}`);
       }
     }
 
-    // 6. Seed MLOps Models if empty
+    // 6. Seed MLOps Models if empty (Single Batch Insert)
     const mlopsCheck = await query(`SELECT COUNT(*) as cnt FROM mlops_models`);
     if (parseInt((mlopsCheck.rows[0] && mlopsCheck.rows[0].cnt) || 0, 10) === 0) {
       const initialModels = [
@@ -748,14 +755,19 @@ async function initDatabase() {
         { id: 'm-300', version: 'v3.0.0 Transformer', name: 'Temporal Attention Net', status: 'STAGING', accuracy: 93.8, dirAccuracy: '91.8%', rmse: 1.31, mae: 1.04, mape: 0.99, latencyP95Ms: 32, trainedAt: '2026-07-15 09:45:00', author: 'QuantML-Engine' },
         { id: 'm-280', version: 'v2.8.0 Random Forest', name: 'Tree Decision Forest', status: 'DEPRECATED', accuracy: 89.4, dirAccuracy: '87.2%', rmse: 1.68, mae: 1.38, mape: 1.25, latencyP95Ms: 10, trainedAt: '2026-06-30 16:20:00', author: 'QuantML-Engine' }
       ];
+      const mValues = [];
+      const mParams = [];
+      let mIdx = 1;
       for (const m of initialModels) {
-        await query(
-          `INSERT INTO mlops_models (id, version, name, status, accuracy, dir_accuracy, rmse, mae, mape, latency_p95_ms, trained_at, author)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
-           ON CONFLICT (id) DO NOTHING`,
-          [m.id, m.version, m.name, m.status, m.accuracy, m.dirAccuracy, m.rmse, m.mae, m.mape, m.latencyP95Ms, m.trainedAt, m.author]
-        );
+        mValues.push(`($${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++}, $${mIdx++})`);
+        mParams.push(m.id, m.version, m.name, m.status, m.accuracy, m.dirAccuracy, m.rmse, m.mae, m.mape, m.latencyP95Ms, m.trainedAt, m.author);
       }
+      await query(
+        `INSERT INTO mlops_models (id, version, name, status, accuracy, dir_accuracy, rmse, mae, mape, latency_p95_ms, trained_at, author)
+         VALUES ${mValues.join(', ')}
+         ON CONFLICT (id) DO NOTHING`,
+        mParams
+      );
     }
 
     await updateSequences();

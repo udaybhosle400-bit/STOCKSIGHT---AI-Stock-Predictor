@@ -1,13 +1,15 @@
 const db = require('../config/database');
 const logger = require('../utils/logger');
 
+const BoundedLRUCache = require('../utils/boundedCache');
+
 /**
  * In-Memory Fallback Feature Store
  * Used when PostgreSQL database is offline.
  */
 const inMemoryFeatureStore = {
-  // Map: symbol -> Map(date -> Map(featureName -> record))
-  features: new Map(),
+  // Bounded Cache: symbol -> Map(date -> Map(featureName -> record))
+  features: new BoundedLRUCache(50, 30 * 60 * 1000),
   stats: {
     totalRecords: 0,
     featuresByCategory: {
@@ -39,10 +41,7 @@ class FeatureModel {
     // Always update In-Memory Storage for instant <1ms lookup
     for (const rec of records) {
       const sym = rec.symbol.toUpperCase();
-      if (!inMemoryFeatureStore.features.has(sym)) {
-        inMemoryFeatureStore.features.set(sym, new Map());
-      }
-      const symMap = inMemoryFeatureStore.features.get(sym);
+      const symMap = inMemoryFeatureStore.features.get(sym) || new Map();
       const dateKey = typeof rec.date === 'string' ? rec.date : new Date(rec.date).toISOString().split('T')[0];
 
       if (!symMap.has(dateKey)) {
@@ -60,6 +59,7 @@ class FeatureModel {
       };
 
       dateMap.set(rec.featureName, recordObj);
+      inMemoryFeatureStore.features.set(sym, symMap);
       savedCount++;
     }
 
