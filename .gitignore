@@ -16,6 +16,9 @@ logs/
 # Runtime
 storage/
 scratch/
+storage/pgdata/
+storage/pgdata2/
+storage/pgtest/
 
 # OS files
 .DS_Store
@@ -28,8 +31,3 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.pid
-storage/pgdata/
-storage/pgdata2/
-storage/pgtest/
-
-

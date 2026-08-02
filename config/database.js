@@ -38,6 +38,25 @@ async function reinitializePGlite() {
   }
 }
 
+let syncTimer = null;
+let disableDiskSync = false;
+
+function scheduleDiskSync() {
+  if (disableDiskSync) return;
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(() => {
+    syncDatabaseToDisk().catch(() => {});
+  }, 1000);
+}
+
+// Ensure pending disk sync flushes on process exit
+process.on('beforeExit', () => {
+  if (syncTimer) {
+    clearTimeout(syncTimer);
+    syncDatabaseToDisk().catch(() => {});
+  }
+});
+
 /**
  * Standardized Query Executor (PostgreSQL Pool & PGlite Compatible)
  */
@@ -76,10 +95,10 @@ async function query(text, params = []) {
     throw new Error('No active PostgreSQL driver available');
   }
 
-  // Trigger disk sync for mutating statements
+  // Trigger debounced disk sync for mutating statements
   const isMutating = /^\s*(INSERT|UPDATE|DELETE)\b/i.test(text);
-  if (isMutating) {
-    syncDatabaseToDisk().catch(() => {});
+  if (isMutating && !disableDiskSync) {
+    scheduleDiskSync();
   }
 
   return result;
@@ -175,6 +194,7 @@ async function syncDatabaseToDisk() {
 async function loadDatabaseFromDisk() {
   if (!fs.existsSync(STORE_JSON_PATH)) return false;
 
+  disableDiskSync = true;
   try {
     const raw = fs.readFileSync(STORE_JSON_PATH, 'utf8');
     if (!raw.trim()) return false;
@@ -309,6 +329,8 @@ async function loadDatabaseFromDisk() {
   } catch (err) {
     if (logger && logger.error) logger.error(`Disk restore error: ${err.message}`);
     return false;
+  } finally {
+    disableDiskSync = false;
   }
 }
 

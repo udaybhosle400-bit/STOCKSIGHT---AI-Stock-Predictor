@@ -116,30 +116,41 @@ class QuantDataPipelineService {
     const sym = symbol.toUpperCase();
     let savedCount = 0;
 
+    if (!Array.isArray(candles) || candles.length === 0) return 0;
+
     if (db.isDbConnected()) {
-      for (const c of candles) {
-        try {
-          await db.query(`
-            INSERT INTO quant_ohlcv (symbol, timestamp, open, high, low, close, adj_close, volume)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-            ON CONFLICT (symbol, timestamp) 
-            DO UPDATE SET open = EXCLUDED.open, high = EXCLUDED.high, low = EXCLUDED.low, 
-                          close = EXCLUDED.close, adj_close = EXCLUDED.adj_close, volume = EXCLUDED.volume;
-          `, [sym, c.timestamp, c.open, c.high, c.low, c.close, c.adjClose, c.volume]);
-          savedCount++;
-        } catch (err) {
-          logger.error(`QuantPipeline: Database error inserting OHLCV for ${sym}: ${err.message}`);
+      try {
+        const values = [];
+        const params = [];
+        let pIdx = 1;
+
+        for (const c of candles) {
+          values.push(`($${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++}, $${pIdx++})`);
+          params.push(sym, c.timestamp, c.open, c.high, c.low, c.close, c.adjClose, c.volume);
         }
+
+        const sql = `
+          INSERT INTO quant_ohlcv (symbol, timestamp, open, high, low, close, adj_close, volume)
+          VALUES ${values.join(', ')}
+          ON CONFLICT (symbol, timestamp) 
+          DO UPDATE SET open = EXCLUDED.open, high = EXCLUDED.high, low = EXCLUDED.low, 
+                        close = EXCLUDED.close, adj_close = EXCLUDED.adj_close, volume = EXCLUDED.volume;
+        `;
+        await db.query(sql, params);
+        savedCount = candles.length;
+      } catch (err) {
+        logger.error(`QuantPipeline: Database error inserting OHLCV for ${sym}: ${err.message}`);
       }
-    } else {
-      if (!inMemoryQuantStore.ohlcv.has(sym)) {
-        inMemoryQuantStore.ohlcv.set(sym, new Map());
-      }
-      const symMap = inMemoryQuantStore.ohlcv.get(sym);
-      for (const c of candles) {
-        symMap.set(c.timestamp, c);
-        savedCount++;
-      }
+    }
+
+    // Always populate inMemoryQuantStore for instant <1ms RAM lookups
+    if (!inMemoryQuantStore.ohlcv.has(sym)) {
+      inMemoryQuantStore.ohlcv.set(sym, new Map());
+    }
+    const symMap = inMemoryQuantStore.ohlcv.get(sym);
+    for (const c of candles) {
+      symMap.set(c.timestamp, c);
+      savedCount++;
     }
 
     inMemoryQuantStore.ingestionStats.totalOHLCVRows += savedCount;
@@ -536,6 +547,19 @@ class QuantDataPipelineService {
 
   async getHistoricalOHLCV(symbol, dateRange = '1mo') {
     const sym = symbol.toUpperCase();
+
+    const filterByRange = (bars, range) => {
+      if (!Array.isArray(bars) || bars.length === 0) return bars;
+      const countMap = { '1mo': 30, '3mo': 90, '6mo': 180, '1y': 365, '2y': 730, '5y': 1825 };
+      const limit = countMap[range] || 365;
+      return bars.slice(-limit);
+    };
+
+    if (inMemoryQuantStore.ohlcv.has(sym) && inMemoryQuantStore.ohlcv.get(sym).size > 0) {
+      const allBars = Array.from(inMemoryQuantStore.ohlcv.get(sym).values());
+      return filterByRange(allBars, dateRange);
+    }
+
     if (db.isDbConnected()) {
       try {
         const res = await db.query(`
@@ -544,18 +568,21 @@ class QuantDataPipelineService {
           WHERE symbol = $1
           ORDER BY timestamp ASC;
         `, [sym]);
-        if (res.rows && res.rows.length > 0) return res.rows;
+        if (res.rows && res.rows.length > 0) {
+          this.saveOHLCV(sym, res.rows);
+          return filterByRange(res.rows, dateRange);
+        }
       } catch (err) {
         logger.warn(`QuantPipeline: PostgreSQL OHLCV query fallback for ${sym}: ${err.message}`);
       }
     }
 
-    if (inMemoryQuantStore.ohlcv.has(sym)) {
-      return Array.from(inMemoryQuantStore.ohlcv.get(sym).values());
+    // Direct fallback fetch: Always fetch 1-year master dataset so future range calls use RAM
+    const fetchedBars = await this.fetchAndCleanOHLCV(sym, '1y');
+    if (Array.isArray(fetchedBars) && fetchedBars.length > 0) {
+      this.saveOHLCV(sym, fetchedBars);
     }
-
-    // Direct fallback fetch if not yet ingested
-    return this.fetchAndCleanOHLCV(sym, dateRange);
+    return filterByRange(fetchedBars, dateRange);
   }
 
   async getFundamentals(symbol) {

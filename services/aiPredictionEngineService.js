@@ -5,6 +5,10 @@ const companyRegistry = require('../config/companyRegistry');
 const logger = require('../utils/logger');
 
 class AIPredictionEngineService {
+  constructor() {
+    this.inFlightPredictions = new Map();
+  }
+
   /**
    * Helper: Calculate Sigmoid Probability
    */
@@ -268,6 +272,24 @@ class AIPredictionEngineService {
   // =========================================================================
   async trainAndPredictCompany(symbol) {
     const sym = symbol.toUpperCase();
+
+    if (this.inFlightPredictions.has(sym)) {
+      return await this.inFlightPredictions.get(sym);
+    }
+
+    const promise = (async () => {
+      try {
+        return await this._trainAndPredictCompanyInternal(sym);
+      } finally {
+        this.inFlightPredictions.delete(sym);
+      }
+    })();
+
+    this.inFlightPredictions.set(sym, promise);
+    return await promise;
+  }
+
+  async _trainAndPredictCompanyInternal(sym) {
     const company = companyRegistry.getCompany(sym) || { name: sym, sym: sym, cmp: 1000.0, sector: 'General' };
 
     // Fetch Phase 14 Feature Snapshot
@@ -292,18 +314,16 @@ class AIPredictionEngineService {
     const gruReg = this.predictGRUModel(features, ohlcv, currentPrice);
     const tfReg = this.predictTransformerModel(features, ohlcv, currentPrice);
 
-    // Save Model Metadata to Registry
+    // Save Model Metadata to Registry in a single batch
     const modelsList = [rfReg, xgbReg, lgbmReg, catReg, lstmReg, gruReg, tfReg];
-    for (const m of modelsList) {
-      await aiPredictionModel.saveModelMetadata({
-        symbol: sym,
-        modelName: m.name,
-        modelVersion: m.version,
-        modelType: m.type,
-        metrics: m.metrics,
-        hyperparameters: { n_estimators: 100, learning_rate: 0.05, max_depth: 6 }
-      });
-    }
+    await aiPredictionModel.saveBatchModelMetadata(modelsList.map(m => ({
+      symbol: sym,
+      modelName: m.name,
+      modelVersion: m.version,
+      modelType: m.type,
+      metrics: m.metrics,
+      hyperparameters: { n_estimators: 100, learning_rate: 0.05, max_depth: 6 }
+    })));
 
     // Weighted Stacking Ensemble Blending
     const validModels = modelsList.filter(m => !isNaN(m.predictedPrice) && !isNaN(m.predictedReturn));
@@ -382,14 +402,18 @@ class AIPredictionEngineService {
     let totalPredictions = 0;
     let failedCount = 0;
 
-    for (const sym of symbols) {
-      try {
-        await this.trainAndPredictCompany(sym);
-        totalPredictions++;
-      } catch (err) {
-        logger.error(`AIPredictionEngine: Error processing ${sym}: ${err.message}`);
-        failedCount++;
-      }
+    const chunkSize = 15;
+    for (let i = 0; i < symbols.length; i += chunkSize) {
+      const chunk = symbols.slice(i, i + chunkSize);
+      await Promise.all(chunk.map(async (sym) => {
+        try {
+          await this.trainAndPredictCompany(sym);
+          totalPredictions++;
+        } catch (err) {
+          logger.error(`AIPredictionEngine: Error processing ${sym}: ${err.message}`);
+          failedCount++;
+        }
+      }));
     }
 
     const durationMs = Date.now() - startTime;
